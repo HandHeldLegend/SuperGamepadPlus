@@ -1,0 +1,13 @@
+### Footprint positions - created on Thu Aug 31 16:46:24 2023 ###
+### Printed by KiCad version 7.0.6
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref     Val                 Package                         PosX       PosY       Rot  Side
+C9        10uF/10V_(20%)      C_0603_1608Metric           201.1033   -98.1514   90.0000  bottom
+C10       100n                C_0201_0603Metric           202.3733   -98.5520  -90.0000  bottom
+J1        USB_C_Receptacle    U06-CF2A5R-037              150.0000   -84.3924    0.0000  bottom
+TRL1      78171-0002          78171-0002                   90.0000  -103.0000    0.0000  bottom
+TRR1      78171-0002          78171-0002                  210.0000  -103.0000    0.0000  bottom
+U1        78171-0002          78171-0002                  114.1969  -100.0609  180.0000  bottom
+U6        ESP32-PICO-MINI-02  MODULE_ESP32-PICO-MINI-02   192.5963  -101.3431  180.0000  bottom
+## End
