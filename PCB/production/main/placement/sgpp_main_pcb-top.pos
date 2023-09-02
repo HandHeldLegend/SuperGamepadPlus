@@ -1,4 +1,4 @@
-### Footprint positions - created on Thu Aug 31 16:46:24 2023 ###
+### Footprint positions - created on Fri Sep  1 19:56:18 2023 ###
 ### Printed by KiCad version 7.0.6
 ## Unit = mm, Angle = deg.
 ## Side : top
@@ -73,6 +73,8 @@ R21       10k                R_0201_0603Metric                                16
 R22       27                 R_0201_0603Metric                                155.9409   -91.3412    0.0000  top
 R23       27                 R_0201_0603Metric                                155.9409   -90.5934    0.0000  top
 R24       1k                 R_0201_0603Metric                                153.6446   -97.2312   90.0000  top
+R25       75k                R_0603_1608Metric                                123.9012   -86.5124    0.0000  top
+R26       75k                R_0603_1608Metric                                123.9012   -88.0572  180.0000  top
 Ref**     Val**              FP_RPLAYGROUND_LOGO                               97.0280   -94.7674    0.0000  top
 SPSEL1    SPAD               snes_pad                                         137.0000  -109.1484    0.0000  top
 SPST1     SPAD               snes_pad                                         152.5000  -109.1484    0.0000  top
