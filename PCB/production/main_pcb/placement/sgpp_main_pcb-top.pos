@@ -1,15 +1,15 @@
-### Footprint positions - created on Fri Sep  1 19:56:18 2023 ###
+### Footprint positions - created on Wed Sep  6 23:51:17 2023 ###
 ### Printed by KiCad version 7.0.6
 ## Unit = mm, Angle = deg.
 ## Side : top
 # Ref     Val                Package                                              PosX       PosY       Rot  Side
 C1        1u                 C_0201_0603Metric                                133.9342   -86.8680   90.0000  top
-C2        47uF_6.3v          CP_EIA-3216-18_Kemet-A                           134.9926   -93.9939    0.0000  top
+C2        47uF_6.3v          CP_EIA-3216-18_Kemet-A                           132.0292   -90.3224  -90.0000  top
 C3        1u                 C_0201_0603Metric                                133.2251   -83.6800   90.0000  top
 C4        10uF               C_0402_1005Metric                                134.4906   -84.8689  180.0000  top
 C5        100n               C_0201_0603Metric                                147.7772   -89.9160  180.0000  top
-C6        0.33uF             C_0603_1608Metric                                133.5783   -91.3754   90.0000  top
-C7        0.33uF             C_0603_1608Metric                                137.6172   -85.6996    0.0000  top
+C6        100n               C_0201_0603Metric                                122.8450   -89.9668    0.0000  top
+C7        2.2uF              C_0603_1608Metric                                133.8580   -89.4080  -90.0000  top
 C8        100n               C_0201_0603Metric                                166.6074  -120.6970  180.0000  top
 C11       100n               C_0201_0603Metric                                155.9374   -89.8314    0.0000  top
 C12       100n               C_0201_0603Metric                                152.8109   -92.9986   90.0000  top
@@ -19,7 +19,7 @@ C15       1u                 C_0201_0603Metric                                15
 C16       100n               C_0201_0603Metric                                158.3529   -97.1897   90.0000  top
 C17       100n               C_0201_0603Metric                                162.3571   -97.7339   90.0000  top
 C18       1u                 C_0201_0603Metric                                147.9685   -87.0298   90.0000  top
-C19       100n               C_0201_0603Metric                                138.0782   -93.2949    0.0000  top
+C19       2.2uF              C_0603_1608Metric                                139.4460   -86.3600  180.0000  top
 D1        CUS08F30           D_SOD-323_HandSoldering                          128.7526   -88.4682    0.0000  top
 D2        CUS08F30           D_SOD-323_HandSoldering                          135.6660   -81.3085   90.0000  top
 D3        CUS08F30           D_SOD-323_HandSoldering                          173.0491   -86.4938  -90.0000  top
@@ -75,6 +75,7 @@ R23       27                 R_0201_0603Metric                                15
 R24       1k                 R_0201_0603Metric                                153.6446   -97.2312   90.0000  top
 R25       75k                R_0603_1608Metric                                123.9012   -86.5124    0.0000  top
 R26       75k                R_0603_1608Metric                                123.9012   -88.0572  180.0000  top
+R27       10k                R_0201_0603Metric                                135.9408   -93.2688    0.0000  top
 Ref**     Val**              FP_RPLAYGROUND_LOGO                               97.0280   -94.7674    0.0000  top
 SPSEL1    SPAD               snes_pad                                         137.0000  -109.1484    0.0000  top
 SPST1     SPAD               snes_pad                                         152.5000  -109.1484    0.0000  top
@@ -82,7 +83,7 @@ SW1       1TS026A-1000-0550  1TS026A-1000-0550                                14
 SW2       1TS026A-1000-0550  1TS026A-1000-0550                                166.8780   -99.5680    0.0000  top
 U2        BQ25180            DSBGA                                            132.1926   -85.0651    0.0000  top
 U3        PI3USB4000A        Texas_UQFN-10_1.5x2mm_P0.5mm                     150.0005   -88.7730   90.0000  top
-U4        NJM12884U2-33      SOT-89-5                                         136.8988   -89.9964   90.0000  top
+U4        XC6222             SOT-89-5                                         137.1600   -89.9964   90.0000  top
 U5        CH340K             ESSOP-10                                         171.3910  -118.6933  180.0000  top
 U7        GD25Q80EEIGR       USON-8-EP(2x3)                                   154.3538   -94.5308   90.0000  top
 U8        RP2040             QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm              161.1957   -92.0954   90.0000  top
