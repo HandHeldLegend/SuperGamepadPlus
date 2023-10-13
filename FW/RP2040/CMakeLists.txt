@@ -48,6 +48,7 @@ hardware_pwm
 hardware_spi
 hardware_sync
 hardware_timer
+hardware_i2c
 
 tinyusb_device
 tinyusb_board

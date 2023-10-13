@@ -126,7 +126,7 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/build/CMakeFiles/pkgRedirects
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/PROGCC_RP2040
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/SUPERGAMEPAD_RP2040
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/gcc-arm-none-eabi/bin/arm-none-eabi-ld.exe
@@ -294,15 +294,6 @@ PICO_STDIO_UART:BOOL=ON
 
 //Globally enable stdio USB
 PICO_STDIO_USB:BOOL=OFF
-
-//Value Computed by CMake
-PROGCC_RP2040_BINARY_DIR:STATIC=C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/build
-
-//Value Computed by CMake
-PROGCC_RP2040_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-PROGCC_RP2040_SOURCE_DIR:STATIC=C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040
 
 //Value Computed by CMake
 SUPERGAMEPAD_RP2040_BINARY_DIR:STATIC=C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/build

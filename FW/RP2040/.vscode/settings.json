@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "hoja_includes.h": "c",
+        "hoja.h": "c",
+        "hoja_comms.h": "c",
+        "main.h": "c",
+        "btinput.h": "c",
+        "switch_analog.h": "c"
+    }
+}
