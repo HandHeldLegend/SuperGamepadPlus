@@ -1,5 +1,6 @@
 #include "core_bt_switch.h"
 
+
 /**
  * @brief NS Core Report mode enums
 */
@@ -31,9 +32,130 @@ typedef enum
     NS_STATUS_RUNNING,
 } ns_core_status_t;
 
-TaskHandle_t switch_bt_task_handle = NULL;
+TaskHandle_t _switch_bt_task_handle = NULL;
+ns_power_handle_t _switch_power_state = NS_POWER_AWAKE;
+ns_report_mode_t _switch_report_mode = NS_REPORT_MODE_IDLE;
 
-uint8_t ns_currentReportMode = 0xAA;
+sw_input_s _switch_input_data = {};
+
+void _switch_bt_task_standard(void * parameters);
+void _switch_bt_task_empty(void * parameters);
+void _switch_bt_task_short(void * parameters);
+void ns_controller_input_task_set(ns_report_mode_t report_mode_type);
+
+void ns_controller_setinputreportmode(uint8_t report_mode)
+{
+    char* TAG = "ns_controller_setinputreportmode";
+
+    ESP_LOGI(TAG, "Switching to input mode: %04x", report_mode);
+    switch(report_mode)
+    {
+        // Standard
+        case 0x30:
+            ESP_LOGI(TAG, "Starting standard report mode.");
+            ns_controller_input_task_set(NS_REPORT_MODE_FULL);
+            break;
+
+        // SimpleHID. Data pushes only on button press/release
+        case 0x3F:
+            ESP_LOGI(TAG, "Starting short report mode.");
+            ns_controller_input_task_set(NS_REPORT_MODE_SIMPLE);
+            break;
+
+        // NFC/IR
+        case 0x31:
+        case 0x00 ... 0x03:
+        default:
+            // ERROR
+            break;
+    }
+}
+
+void ns_controller_input_task_set(ns_report_mode_t report_mode_type)
+{
+    const char* TAG = "ns_controller_input_task_set";
+    switch(report_mode_type)
+    {
+        default:
+        case NS_REPORT_MODE_IDLE:
+            ESP_LOGI(TAG, "Start input IDLE task...");
+            // Just stop all tasks and clear report mode internal.
+            if (_switch_bt_task_handle != NULL)
+            {
+                vTaskDelete(_switch_bt_task_handle);
+                _switch_bt_task_handle = NULL;
+            }
+            _switch_report_mode = NS_REPORT_MODE_IDLE;
+            break;
+
+        case NS_REPORT_MODE_BLANK:
+            ESP_LOGI(TAG, "Start input BLANK task...");
+            if (_switch_bt_task_handle != NULL)
+            {
+                vTaskDelete(_switch_bt_task_handle);
+                _switch_bt_task_handle = NULL;
+            }
+
+            _switch_report_mode = NS_REPORT_MODE_BLANK;
+            xTaskCreatePinnedToCore(_switch_bt_task_empty, 
+                                "Blank Send Task", 2048,
+                                NULL, 0, &_switch_bt_task_handle, 0);
+            break;
+
+        case NS_REPORT_MODE_SIMPLE:
+            ESP_LOGI(TAG, "Start input SIMPLE task...");
+            if (_switch_bt_task_handle != NULL)
+            {
+                vTaskDelete(_switch_bt_task_handle);
+                _switch_bt_task_handle = NULL;
+            }
+
+            // Set the internal reporting mode.
+            _switch_report_mode = NS_REPORT_MODE_SIMPLE;
+            xTaskCreatePinnedToCore(_switch_bt_task_short, 
+                            "Standard Send Task", 2048,
+                            NULL, 0, &_switch_bt_task_handle, 0);
+            break;
+
+        case NS_REPORT_MODE_FULL:
+            ESP_LOGI(TAG, "Start input FULL task...");
+            if (_switch_bt_task_handle != NULL)
+            {
+                vTaskDelete(_switch_bt_task_handle);
+                _switch_bt_task_handle = NULL;
+            }
+            _switch_report_mode = NS_REPORT_MODE_FULL;
+            xTaskCreatePinnedToCore(_switch_bt_task_standard, 
+                            "Standard Send Task", 2048,
+                            NULL, 0, &_switch_bt_task_handle, 0);
+            break;
+    }
+}
+
+void ns_controller_sleep_handle(ns_power_handle_t power_type)
+{
+    const char* TAG = "ns_controller_sleep_handle";
+    switch(power_type)
+    {
+        default:
+        case NS_POWER_AWAKE:
+            ESP_LOGI(TAG, "Controller set to awake.");
+            _switch_power_state = NS_POWER_AWAKE;
+            ns_controller_input_task_set(_switch_report_mode);
+            break;
+
+        case NS_POWER_SLEEP:
+            ESP_LOGI(TAG, "Controller set to sleep.");
+            _switch_power_state = NS_POWER_SLEEP;
+            if (_switch_bt_task_handle != NULL)
+            {
+                vTaskDelete(_switch_bt_task_handle);
+                _switch_bt_task_handle = NULL;
+            }
+            break;
+    }
+}
+
 
 // SWITCH BTC GAP Event Callback
 void switch_bt_gap_cb(esp_bt_gap_cb_event_t event, esp_bt_gap_cb_param_t *param)
@@ -58,14 +180,15 @@ void switch_bt_gap_cb(esp_bt_gap_cb_event_t event, esp_bt_gap_cb_param_t *param)
         case ESP_BT_GAP_AUTH_CMPL_EVT:{
             if (param->auth_cmpl.stat == ESP_BT_STATUS_SUCCESS) {
                 ESP_LOGI(TAG, "authentication success: %s", param->auth_cmpl.device_name);
-                //esp_log_buffer_hex(TAG, param->auth_cmpl.bda, ESP_BD_ADDR_LEN);
-                memcpy(ns_hostAddress, param->auth_cmpl.bda, ESP_BD_ADDR_LEN);
+                esp_log_buffer_hex(TAG, param->auth_cmpl.bda, ESP_BD_ADDR_LEN);
                 ns_controller_input_task_set(NS_REPORT_MODE_BLANK);
+
             } else {
                 ESP_LOGI(TAG, "authentication failed, status:%d", param->auth_cmpl.stat);
             }
             break;
         }
+
         case ESP_BT_GAP_MODE_CHG_EVT:{
             // This is critical for Nintendo Switch to act upon.
             // If power mode is 0, there should be NO packets sent from the controller until
@@ -73,11 +196,11 @@ void switch_bt_gap_cb(esp_bt_gap_cb_event_t event, esp_bt_gap_cb_param_t *param)
             ESP_LOGI(TAG, "power mode change: %d", param->mode_chg.mode);
             if (param->mode_chg.mode == 0)
             {
-                ns_controller_sleep_handle(NS_POWER_SLEEP);   
+                ns_controller_sleep_handle(NS_POWER_SLEEP);
             }
             else
             {
-                ns_controller_sleep_handle(NS_POWER_AWAKE);    
+                ns_controller_sleep_handle(NS_POWER_AWAKE);  
             }
             break;
         }
@@ -106,10 +229,10 @@ void switch_bt_hidd_cb(esp_hidd_cb_event_t event, esp_hidd_cb_param_t *param)
         case ESP_HIDD_REGISTER_APP_EVT:
             if (param->register_app.status == ESP_HIDD_SUCCESS) {
                 ESP_LOGI(TAG, "Register HIDD app parameters success!");
-                if(param->register_app.bd_addr == NULL)
-                {
-                    ESP_LOGI(TAG, "bd_addr is undefined!");
-                }
+                //if(param->register_app.bd_addr == NULL)
+                //{
+                //    ESP_LOGI(TAG, "bd_addr is undefined!");
+                //}
             } else {
                 ESP_LOGI(TAG, "Register HIDD app parameters failed!");
             }
@@ -132,7 +255,6 @@ void switch_bt_hidd_cb(esp_hidd_cb_event_t event, esp_hidd_cb_param_t *param)
                             param->open.bd_addr[5]);
                     ESP_LOGI(TAG, "making self non-discoverable and non-connectable.");
                     esp_bt_gap_set_scan_mode(ESP_BT_NON_CONNECTABLE, ESP_BT_NON_DISCOVERABLE);
-
                     ns_controller_input_task_set(NS_REPORT_MODE_SIMPLE);
 
                 } else {
@@ -180,7 +302,7 @@ void switch_bt_hidd_cb(esp_hidd_cb_event_t event, esp_hidd_cb_param_t *param)
             break;
         case ESP_HIDD_INTR_DATA_EVT:
             // Send interrupt data to command handler
-            ns_comms_handle_command(param->intr_data.report_id, param->intr_data.len, param->intr_data.data);
+            ns_report_handler(param->intr_data.report_id, param->intr_data.data, param->intr_data.len);
             break;
         case ESP_HIDD_VC_UNPLUG_EVT:
             ESP_LOGI(TAG, "ESP_HIDD_VC_UNPLUG_EVT");
@@ -231,7 +353,6 @@ esp_hid_device_config_t switch_hidd_config = {
     .report_maps_len = 1,
 };
 
-
 // Attempt start of Nintendo Switch controller core
 int core_bt_switch_start(void)
 {
@@ -239,11 +360,8 @@ int core_bt_switch_start(void)
     esp_err_t ret;
     int err;
 
-    // SET UP CONTROLLER TYPE VARS
-    ns_controller_setup_memory();
-
     // Convert calibration data
-    ns_controller_applycalibration();
+    switch_analog_calibration_init();
 
     err = util_bluetooth_init(global_loaded_settings.device_mac);
 
@@ -251,8 +369,11 @@ int core_bt_switch_start(void)
 
     for(uint8_t i = 0; i < 6; i++)
     {
-        if(global_loaded_settings.switch_host_mac[i] != 0xFF) paired = true;
+        if(global_loaded_settings.switch_host_mac[i] != 0) paired = true;
     }
+
+    // DEBUG
+    paired = false;
 
     // If we are already paired, attempt connection
     if (paired)
@@ -277,11 +398,11 @@ int core_bt_switch_start(void)
 }
 
 // Stop Nintendo Switch controller core
-void core_ns_stop(void)
+void core_bt_switch_stop(void)
 {
     const char* TAG = "core_ns_stop";
-    ns_connected = false;
-    ns_controller_input_task_set(NS_REPORT_MODE_IDLE);
+    //ns_connected = false;
+    //ns_controller_input_task_set(NS_REPORT_MODE_IDLE);
     util_bluetooth_deinit();
 }
 
@@ -302,4 +423,92 @@ void ns_savepairing(uint8_t* host_addr)
     memcpy(global_loaded_settings.switch_host_mac, host_addr, sizeof(global_loaded_settings.switch_host_mac));
     
     // Save all settings send pairing info to RP2040
+}
+
+void _switch_bt_task_standard(void * parameters)
+{
+    ESP_LOGI("_switch_bt_task_standard", "Starting input loop task...");
+    for(;;)
+    {
+        static uint8_t _full_buffer[64] = {0};
+
+        ns_report_clear(_full_buffer, 64);
+        ns_report_setinputreport_full(_full_buffer, &_switch_input_data);
+
+        ns_report_settimer(_full_buffer);
+        ns_report_setbattconn(_full_buffer);
+        _full_buffer[12] = 0x70;
+
+        esp_bt_hid_device_send_report(ESP_HIDD_REPORT_TYPE_INTRDATA, 0x30, 47, _full_buffer);
+
+        vTaskDelay(8 / portTICK_PERIOD_MS);
+    }
+}
+
+// Task used to send short or simple inputs.
+// Only sends input when data is changed! SOOPER.
+void _switch_bt_task_short(void * parameters)
+{
+    const char* TAG = "_switch_bt_task_short";
+    ESP_LOGI(TAG, "Sending short (0x3F) reports on core %d\n", xPortGetCoreID());
+
+    for(;;)
+    {
+        static uint8_t _short_buffer[64] = {0};
+
+        ns_report_clear(_short_buffer, 64);
+
+        _ns_report_setinputreport_short(_short_buffer);
+
+        esp_bt_hid_device_send_report(ESP_HIDD_REPORT_TYPE_INTRDATA, 0x3F, 12, _short_buffer);
+        
+        vTaskDelay(16 / portTICK_PERIOD_MS); 
+    }
+}
+
+void _switch_bt_task_empty(void * parameters)
+{
+    const char* TAG = "ns_report_task_sendempty";
+    ESP_LOGI(TAG, "Sending empty reports on core %d\n", xPortGetCoreID());
+    uint8_t tmp[2] = {0x00, 0x00};
+
+    for(;;)
+    {   
+        esp_bt_hid_device_send_report(ESP_HIDD_REPORT_TYPE_INTRDATA, 0xA1, 2, tmp);
+        vTaskDelay(8 / portTICK_PERIOD_MS);
+    }
+}
+
+void switch_bt_sendinput(i2cinput_input_s *input)
+{
+    _switch_input_data.ls_x = input->lx;
+    _switch_input_data.ls_y = input->ly;
+
+    _switch_input_data.rs_x = input->rx;
+    _switch_input_data.rs_y = input->ry;
+
+    _switch_input_data.b_a = input->button_a;
+    _switch_input_data.b_b = input->button_b;
+    _switch_input_data.b_x = input->button_x;
+    _switch_input_data.b_y = input->button_y;
+
+    _switch_input_data.d_down   = input->dpad_down;
+    _switch_input_data.d_left   = input->dpad_left;
+    _switch_input_data.d_right  = input->dpad_right;
+    _switch_input_data.d_up     = input->dpad_up;
+
+    _switch_input_data.b_capture    = input->button_capture;
+    _switch_input_data.b_home       = input->button_home;
+    _switch_input_data.b_minus      = input->button_minus;
+    _switch_input_data.b_plus       = input->button_plus;
+
+    _switch_input_data.sb_left  = input->button_stick_left;
+    _switch_input_data.sb_right = input->button_stick_right;
+
+    _switch_input_data.ax   = input->ax;
+    _switch_input_data.ay   = input->ay;
+    _switch_input_data.az   = input->az;
+    _switch_input_data.gx   = input->gx;
+    _switch_input_data.gy   = input->gy;
+    _switch_input_data.gz   = input->gz;
 }

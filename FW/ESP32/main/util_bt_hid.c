@@ -513,7 +513,7 @@ int util_bluetooth_init(uint8_t *mac_address)
     else
     {
         ESP_LOGI(TAG, "Setting mac address...");
-        esp_log_buffer_hex(TAG, mac_address, 8);
+        esp_log_buffer_hex(TAG, mac_address, 6);
         esp_base_mac_addr_set(mac_address);
     }
 

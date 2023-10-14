@@ -20,16 +20,16 @@
 #define ESP_SLAVE_ADDR 0x76                    /*!< ESP32 slave address, you can set any 7bit value */
 
 typedef void (*bluetooth_input_cb_t)(i2cinput_input_s *);
-typedef bool (*bluetooth_ready_cb_t)(void);
 
 bluetooth_input_cb_t _bluetooth_input_cb = NULL;
-bluetooth_ready_cb_t _bluetooth_ready_cb = NULL;
 
 uint8_t _bluetooth_mac_address[6] = {0};
 
+hoja_settings_s global_loaded_settings = {0};
+
 bool _i2c_read_msg(uint8_t *buffer)
 {
-    static uint8_t idx = 0;
+    uint8_t idx = 0;
     static bool d = false;
     static bool e = false;
     static bool f = false;
@@ -58,7 +58,7 @@ bool _i2c_read_msg(uint8_t *buffer)
             }
             else
             {
-                f=true;
+                f=false;
                 idx=HOJA_I2C_MSG_SIZE;
             }
             break;
@@ -107,21 +107,12 @@ static esp_err_t i2c_slave_init(void)
     return i2c_driver_install(i2c_slave_port, conf_slave.mode, I2C_SLAVE_RX_BUF_LEN, I2C_SLAVE_TX_BUF_LEN, 0);
 }
 
-bool app_ready()
-{
-    if (!_bluetooth_ready_cb)
-        return false;
-
-    return _bluetooth_ready_cb();
-}
-
 void app_input(i2cinput_input_s *input)
 {
     if (!_bluetooth_input_cb)
         return;
 
-    if (app_ready())
-        _bluetooth_input_cb(input);
+    _bluetooth_input_cb(input);
 }
 
 void app_main(void)
@@ -162,15 +153,27 @@ void app_main(void)
                 {
 
                     input_mode_t mode = data[1];
+                    global_loaded_settings.device_mac[0] = 0x7C;
+                    global_loaded_settings.device_mac[1] = 0xBB;
+                    global_loaded_settings.device_mac[2] = 0x8A;
+
+                    global_loaded_settings.device_mac[3] = 0xEA;
+                    global_loaded_settings.device_mac[4] = 0x30;
+                    global_loaded_settings.device_mac[5] = 0x57;
 
                     switch (mode)
                     {
                         default:
+                            break;
+
                         case INPUT_MODE_SWPRO:
+                            _bluetooth_input_cb = switch_bt_sendinput;
+                            ESP_LOGI(TAG, "Switch BT Mode Init...");
+                            memset(data, 0, HOJA_I2C_MSG_SIZE);
+                            core_bt_switch_start();
                             break;
 
                         case INPUT_MODE_XINPUT:
-                            _bluetooth_ready_cb = xinput_bt_ready;
                             _bluetooth_input_cb = xinput_bt_sendinput;
                             ESP_LOGI(TAG, "XInput BT Mode Init...");
                             memset(data, 0, HOJA_I2C_MSG_SIZE);

@@ -303,7 +303,7 @@ void xinput_bt_sendinput(i2cinput_input_s *input)
 
     xi_input.dpad_hat = util_get_dpad_hat(lr, ud);
 
-    if (xinput_compare(&xi_input, &xi_input_last))
+    if (xinput_compare(&xi_input, &xi_input_last) && _xinput_ready)
     {
         memcpy(xi_buffer, &xi_input, XI_HID_LEN);
         esp_hidd_dev_input_set(xinput_app_params.hid_dev, 0, XI_INPUT_REPORT_ID, xi_buffer, XI_HID_LEN);

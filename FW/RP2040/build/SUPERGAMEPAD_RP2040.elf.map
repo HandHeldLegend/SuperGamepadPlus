@@ -1652,9 +1652,9 @@ Discarded input sections
                 0x00000000       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .text.i2c_read_timeout_per_char_us
                 0x00000000       0x3e CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- .text          0x00000000        0x0 C:\Users\Mitch\AppData\Local\Temp\ccooyBJC.o
- .data          0x00000000        0x0 C:\Users\Mitch\AppData\Local\Temp\ccooyBJC.o
- .bss           0x00000000        0x0 C:\Users\Mitch\AppData\Local\Temp\ccooyBJC.o
+ .text          0x00000000        0x0 C:\Users\Mitch\AppData\Local\Temp\ccIeQ66h.o
+ .data          0x00000000        0x0 C:\Users\Mitch\AppData\Local\Temp\ccIeQ66h.o
+ .bss           0x00000000        0x0 C:\Users\Mitch\AppData\Local\Temp\ccIeQ66h.o
  .data          0x00000000        0x0 c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg.a(lib_a-calloc.o)
@@ -1870,7 +1870,7 @@ LOAD c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 C:\Users\Mitch\AppData\Local\Temp\ccooyBJC.o
+ .boot2         0x10000000      0x100 C:\Users\Mitch\AppData\Local\Temp\ccIeQ66h.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
@@ -2473,11 +2473,11 @@ LOAD c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.
                 0x10005fc8      0x144 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/xinput.c.obj
                 0x10005fc8                xinput_hid_report
  .text.btinput_init
-                0x1000610c       0x30 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
+                0x1000610c       0x34 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
                 0x1000610c                btinput_init
  .text.btinput_comms_task
-                0x1000613c      0x108 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
-                0x1000613c                btinput_comms_task
+                0x10006140      0x104 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
+                0x10006140                btinput_comms_task
  .text.gpio_set_function
                 0x10006244       0x30 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
                 0x10006244                gpio_set_function
@@ -3445,571 +3445,569 @@ LOAD c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.
 .iplt           0x1000ef00        0x0
  .iplt          0x1000ef00        0x0 c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x1000ef00     0x29c8
+.rodata         0x1000ef00     0x29c0
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.main.str1.4
                 0x1000ef00       0x17 CMakeFiles/SUPERGAMEPAD_RP2040.dir/src/main.c.obj
  *fill*         0x1000ef17        0x1 
- .rodata        0x1000ef18        0x2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/src/main.c.obj
- *fill*         0x1000ef1a        0x2 
  .rodata._generate_mac.str1.4
-                0x1000ef1c       0x16 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja_settings.c.obj
- *fill*         0x1000ef32        0x2 
+                0x1000ef18       0x16 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja_settings.c.obj
+ *fill*         0x1000ef2e        0x2 
  .rodata.settings_load.str1.4
-                0x1000ef34       0x2f CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja_settings.c.obj
- *fill*         0x1000ef63        0x1 
+                0x1000ef30       0x2f CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja_settings.c.obj
+ *fill*         0x1000ef5f        0x1 
  .rodata.str1.4
-                0x1000ef64       0x30 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja_defines.c.obj
+                0x1000ef60       0x30 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja_defines.c.obj
  .rodata.hoja_comms_init
-                0x1000ef94       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja_comms.c.obj
+                0x1000ef90       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja_comms.c.obj
  .rodata.rgb_set_group
-                0x1000efac       0x2c CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+                0x1000efa8       0x2c CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
  .rodata._rgb_group_a
-                0x1000efd8        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
-                0x1000efd8                _rgb_group_a
- *fill*         0x1000efd9        0x3 
+                0x1000efd4        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+                0x1000efd4                _rgb_group_a
+ *fill*         0x1000efd5        0x3 
  .rodata._rgb_group_b
-                0x1000efdc        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
-                0x1000efdc                _rgb_group_b
- *fill*         0x1000efdd        0x3 
+                0x1000efd8        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+                0x1000efd8                _rgb_group_b
+ *fill*         0x1000efd9        0x3 
  .rodata._rgb_group_capture
-                0x1000efe0        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
-                0x1000efe0                _rgb_group_capture
- *fill*         0x1000efe1        0x3 
+                0x1000efdc        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+                0x1000efdc                _rgb_group_capture
+ *fill*         0x1000efdd        0x3 
  .rodata._rgb_group_dpad
-                0x1000efe4        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
-                0x1000efe4                _rgb_group_dpad
+                0x1000efe0        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+                0x1000efe0                _rgb_group_dpad
  .rodata._rgb_group_home
-                0x1000efe8        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
-                0x1000efe8                _rgb_group_home
- *fill*         0x1000efe9        0x3 
+                0x1000efe4        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+                0x1000efe4                _rgb_group_home
+ *fill*         0x1000efe5        0x3 
  .rodata._rgb_group_ls
-                0x1000efec        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
-                0x1000efec                _rgb_group_ls
- *fill*         0x1000efed        0x3 
+                0x1000efe8        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+                0x1000efe8                _rgb_group_ls
+ *fill*         0x1000efe9        0x3 
  .rodata._rgb_group_minus
-                0x1000eff0        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
-                0x1000eff0                _rgb_group_minus
- *fill*         0x1000eff1        0x3 
+                0x1000efec        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+                0x1000efec                _rgb_group_minus
+ *fill*         0x1000efed        0x3 
  .rodata._rgb_group_plus
-                0x1000eff4        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
-                0x1000eff4                _rgb_group_plus
- *fill*         0x1000eff5        0x3 
+                0x1000eff0        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+                0x1000eff0                _rgb_group_plus
+ *fill*         0x1000eff1        0x3 
  .rodata._rgb_group_rs
-                0x1000eff8        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
-                0x1000eff8                _rgb_group_rs
- *fill*         0x1000eff9        0x3 
+                0x1000eff4        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+                0x1000eff4                _rgb_group_rs
+ *fill*         0x1000eff5        0x3 
  .rodata._rgb_group_x
-                0x1000effc        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
-                0x1000effc                _rgb_group_x
- *fill*         0x1000effd        0x3 
+                0x1000eff8        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+                0x1000eff8                _rgb_group_x
+ *fill*         0x1000eff9        0x3 
  .rodata._rgb_group_y
-                0x1000f000        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
-                0x1000f000                _rgb_group_y
- *fill*         0x1000f001        0x3 
+                0x1000effc        0x1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+                0x1000effc                _rgb_group_y
+ *fill*         0x1000effd        0x3 
  .rodata.ws2812_program
-                0x1000f004        0x6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
- *fill*         0x1000f00a        0x2 
+                0x1000f000        0x6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+ *fill*         0x1000f006        0x2 
  .rodata.ws2812_program_instructions
-                0x1000f00c        0x8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
+                0x1000f008        0x8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/rgb.c.obj
  .rodata.util_battery_enable_ship_mode.str1.4
-                0x1000f014       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/battery.c.obj
+                0x1000f010       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/battery.c.obj
  .rodata.util_wire_connected.str1.4
-                0x1000f091       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/battery.c.obj
+                0x1000f08d       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/battery.c.obj
                                   0x1 (size before relaxing)
- *fill*         0x1000f091        0x3 
+ *fill*         0x1000f08d        0x3 
  .rodata.__func__.0
-                0x1000f094       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/battery.c.obj
- *fill*         0x1000f0a9        0x3 
+                0x1000f090       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/utilities/battery.c.obj
+ *fill*         0x1000f0a5        0x3 
  .rodata.desc_bos
-                0x1000f0ac       0x39 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/desc_bos.c.obj
-                0x1000f0ac                desc_bos
- *fill*         0x1000f0e5        0x3 
+                0x1000f0a8       0x39 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/desc_bos.c.obj
+                0x1000f0a8                desc_bos
+ *fill*         0x1000f0e1        0x3 
  .rodata.desc_ms_os_20
-                0x1000f0e8       0xb2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/desc_bos.c.obj
-                0x1000f0e8                desc_ms_os_20
- *fill*         0x1000f19a        0x2 
+                0x1000f0e4       0xb2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/desc_bos.c.obj
+                0x1000f0e4                desc_ms_os_20
+ *fill*         0x1000f196        0x2 
  .rodata.gc_desc_bos
-                0x1000f19c       0x21 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/desc_bos.c.obj
-                0x1000f19c                gc_desc_bos
- *fill*         0x1000f1bd        0x3 
+                0x1000f198       0x21 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/desc_bos.c.obj
+                0x1000f198                gc_desc_bos
+ *fill*         0x1000f1b9        0x3 
  .rodata.gc_desc_ms_os_20
-                0x1000f1c0       0x9e CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/desc_bos.c.obj
-                0x1000f1c0                gc_desc_ms_os_20
- *fill*         0x1000f25e        0x2 
+                0x1000f1bc       0x9e CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/desc_bos.c.obj
+                0x1000f1bc                gc_desc_ms_os_20
+ *fill*         0x1000f25a        0x2 
  .rodata.tud_hid_set_report_cb.str1.4
-                0x1000f260       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/hoja_usb.c.obj
- *fill*         0x1000f275        0x3 
+                0x1000f25c       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/hoja_usb.c.obj
+ *fill*         0x1000f271        0x3 
  .rodata.tud_vendor_rx_cb.str1.4
-                0x1000f278       0x16 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/hoja_usb.c.obj
- *fill*         0x1000f28e        0x2 
+                0x1000f274       0x16 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/hoja_usb.c.obj
+ *fill*         0x1000f28a        0x2 
  .rodata.tud_vendor_control_xfer_cb.str1.4
-                0x1000f290       0x13 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/hoja_usb.c.obj
- *fill*         0x1000f2a3        0x1 
+                0x1000f28c       0x13 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/hoja_usb.c.obj
+ *fill*         0x1000f29f        0x1 
  .rodata.MS_OS_Descriptor
-                0x1000f2a4       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/hoja_usb.c.obj
- *fill*         0x1000f2b6        0x2 
+                0x1000f2a0       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/hoja_usb.c.obj
+ *fill*         0x1000f2b2        0x2 
  .rodata.desc_url
-                0x1000f2b8       0x17 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/hoja_usb.c.obj
-                0x1000f2b8                desc_url
- *fill*         0x1000f2cf        0x1 
+                0x1000f2b4       0x17 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/hoja_usb.c.obj
+                0x1000f2b4                desc_url
+ *fill*         0x1000f2cb        0x1 
  .rodata.tud_xinput_driver
-                0x1000f2d0       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/xinput_device.c.obj
-                0x1000f2d0                tud_xinput_driver
+                0x1000f2cc       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/xinput_device.c.obj
+                0x1000f2cc                tud_xinput_driver
  .rodata.xid_configuration_descriptor
-                0x1000f2e8       0x30 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/xinput_device.c.obj
-                0x1000f2e8                xid_configuration_descriptor
+                0x1000f2e4       0x30 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/xinput_device.c.obj
+                0x1000f2e4                xid_configuration_descriptor
  .rodata.xid_device_descriptor
-                0x1000f318       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/xinput_device.c.obj
-                0x1000f318                xid_device_descriptor
- *fill*         0x1000f32a        0x2 
+                0x1000f314       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/xinput_device.c.obj
+                0x1000f314                xid_device_descriptor
+ *fill*         0x1000f326        0x2 
  .rodata.ginputd_control_xfer_cb
-                0x1000f32c       0x30 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/ginput_device.c.obj
+                0x1000f328       0x30 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/ginput_device.c.obj
  .rodata.gc_hid_report_descriptor
-                0x1000f35c       0x6a CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/ginput_device.c.obj
-                0x1000f35c                gc_hid_report_descriptor
- *fill*         0x1000f3c6        0x2 
+                0x1000f358       0x6a CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/ginput_device.c.obj
+                0x1000f358                gc_hid_report_descriptor
+ *fill*         0x1000f3c2        0x2 
  .rodata.ginput_configuration_descriptor
-                0x1000f3c8       0x29 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/ginput_device.c.obj
-                0x1000f3c8                ginput_configuration_descriptor
- *fill*         0x1000f3f1        0x3 
+                0x1000f3c4       0x29 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/ginput_device.c.obj
+                0x1000f3c4                ginput_configuration_descriptor
+ *fill*         0x1000f3ed        0x3 
  .rodata.ginput_device_descriptor
-                0x1000f3f4       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/ginput_device.c.obj
-                0x1000f3f4                ginput_device_descriptor
- *fill*         0x1000f406        0x2 
+                0x1000f3f0       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/ginput_device.c.obj
+                0x1000f3f0                ginput_device_descriptor
+ *fill*         0x1000f402        0x2 
  .rodata.tud_ginput_driver
-                0x1000f408       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/ginput_device.c.obj
-                0x1000f408                tud_ginput_driver
+                0x1000f404       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/usb/ginput_device.c.obj
+                0x1000f404                tud_ginput_driver
  .rodata.info_handler.str1.4
-                0x1000f420       0x34 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/switch/switch_commands.c.obj
+                0x1000f41c       0x34 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/switch/switch_commands.c.obj
  .rodata.command_handler.str1.4
-                0x1000f454      0x12b CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/switch/switch_commands.c.obj
+                0x1000f450      0x12b CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/switch/switch_commands.c.obj
                                 0x133 (size before relaxing)
- *fill*         0x1000f57f        0x1 
+ *fill*         0x1000f57b        0x1 
  .rodata.command_handler
-                0x1000f580      0x124 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/switch/switch_commands.c.obj
+                0x1000f57c      0x124 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/switch/switch_commands.c.obj
  .rodata.report_handler.str1.4
-                0x1000f6a4       0x14 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/switch/switch_commands.c.obj
- .rodata        0x1000f6b8       0x1c CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/switch/switch_commands.c.obj
+                0x1000f6a0       0x14 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/switch/switch_commands.c.obj
+ .rodata        0x1000f6b4       0x1c CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/switch/switch_commands.c.obj
  .rodata.sw_spi_getaddressdata
-                0x1000f6d4      0x2a8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/switch/switch_spi.c.obj
+                0x1000f6d0      0x2a8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/switch/switch_spi.c.obj
  .rodata._remap_load_remap
-                0x1000f97c       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/input/remap.c.obj
+                0x1000f978       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/input/remap.c.obj
  .rodata._remap_listener.str1.4
-                0x1000f994       0x3d CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/input/remap.c.obj
- *fill*         0x1000f9d1        0x7 
+                0x1000f990       0x3d CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/input/remap.c.obj
+ *fill*         0x1000f9cd        0x3 
  .rodata.default_remap
-                0x1000f9d8        0x8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/input/remap.c.obj
-                0x1000f9d8                default_remap
+                0x1000f9d0        0x8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/input/remap.c.obj
+                0x1000f9d0                default_remap
  .rodata._angle_lut
-                0x1000f9e0       0x20 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/input/stick_scaling.c.obj
-                0x1000f9e0                _angle_lut
+                0x1000f9d8       0x20 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/input/stick_scaling.c.obj
+                0x1000f9d8                _angle_lut
  .rodata.gcinput_hid_report
-                0x1000fa00       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/gcinput.c.obj
+                0x1000f9f8       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/gcinput.c.obj
  .rodata.gamecube_comms_task
-                0x1000fa18       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/gamecube.c.obj
+                0x1000fa10       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/gamecube.c.obj
  .rodata.joybus_program
-                0x1000fa30        0x6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/gamecube.c.obj
- *fill*         0x1000fa36        0x2 
+                0x1000fa28        0x6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/gamecube.c.obj
+ *fill*         0x1000fa2e        0x2 
  .rodata.joybus_program_instructions
-                0x1000fa38       0x28 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/gamecube.c.obj
+                0x1000fa30       0x28 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/gamecube.c.obj
  .rodata.n64_comms_task.str1.4
-                0x1000fa60        0x7 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/n64.c.obj
- *fill*         0x1000fa67        0x1 
+                0x1000fa58        0x7 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/n64.c.obj
+ *fill*         0x1000fa5f        0x1 
  .rodata.joybus_program
-                0x1000fa68        0x6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/n64.c.obj
- *fill*         0x1000fa6e        0x2 
+                0x1000fa60        0x6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/n64.c.obj
+ *fill*         0x1000fa66        0x2 
  .rodata.joybus_program_instructions
-                0x1000fa70       0x28 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/n64.c.obj
+                0x1000fa68       0x28 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/n64.c.obj
  .rodata.nserial_program
-                0x1000fa98        0x6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/nspi.c.obj
- *fill*         0x1000fa9e        0x2 
+                0x1000fa90        0x6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/nspi.c.obj
+ *fill*         0x1000fa96        0x2 
  .rodata.nserial_program_instructions
-                0x1000faa0       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/nspi.c.obj
+                0x1000fa98       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/nspi.c.obj
  .rodata.swpro_configuration_descriptor
-                0x1000fab8       0x40 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/swpro.c.obj
-                0x1000fab8                swpro_configuration_descriptor
+                0x1000fab0       0x40 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/swpro.c.obj
+                0x1000fab0                swpro_configuration_descriptor
  .rodata.swpro_device_descriptor
-                0x1000faf8       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/swpro.c.obj
-                0x1000faf8                swpro_device_descriptor
- *fill*         0x1000fb0a        0x2 
+                0x1000faf0       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/swpro.c.obj
+                0x1000faf0                swpro_device_descriptor
+ *fill*         0x1000fb02        0x2 
  .rodata.swpro_hid_report_descriptor
-                0x1000fb0c       0xcb CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/swpro.c.obj
-                0x1000fb0c                swpro_hid_report_descriptor
- *fill*         0x1000fbd7        0x1 
+                0x1000fb04       0xcb CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/swpro.c.obj
+                0x1000fb04                swpro_hid_report_descriptor
+ *fill*         0x1000fbcf        0x1 
  .rodata.webusb_save_confirm.str1.4
-                0x1000fbd8       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/webusb.c.obj
+                0x1000fbd0       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/webusb.c.obj
  .rodata.webusb_command_processor.str1.4
-                0x1000fbf0      0x242 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/webusb.c.obj
- *fill*         0x1000fe32        0x2 
+                0x1000fbe8      0x242 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/webusb.c.obj
+ *fill*         0x1000fe2a        0x2 
  .rodata.webusb_command_processor
-                0x1000fe34       0xb8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/webusb.c.obj
+                0x1000fe2c       0xb8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/webusb.c.obj
  .rodata.btinput_comms_task.str1.4
-                0x1000feec       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
+                0x1000fee4       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
  .rodata.__func__.0
-                0x1000feec       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
- *fill*         0x1000ff01        0x3 
+                0x1000fee4       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
+ *fill*         0x1000fef9        0x3 
  .rodata.spin_lock_claim_unused.str1.4
-                0x1000ff04       0x1b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x1000ff1f        0x1 
+                0x1000fefc       0x1b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x1000ff17        0x1 
  .rodata.make_branch.str1.4
-                0x1000ff20       0x89 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000ffa9        0x3 
+                0x1000ff18       0x89 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1000ffa1        0x3 
  .rodata.insert_branch_and_link.str1.4
-                0x1000ffac       0x10 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000ffa4       0x10 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.irq_set_exclusive_handler.str1.4
-                0x1000ffbc       0x36 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000fff2        0x2 
+                0x1000ffb4       0x36 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1000ffea        0x2 
  .rodata.irq_add_shared_handler.str1.4
-                0x1000fff4       0xd9 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100100cd        0x3 
+                0x1000ffec       0xd9 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100100c5        0x3 
  .rodata.irq_remove_handler.str1.4
-                0x100100d0       0x3a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1001010a        0x2 
+                0x100100c8       0x3a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10010102        0x2 
  .rodata.irq_add_tail_to_free_list.str1.4
-                0x1001010c       0x3a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10010146        0x2 
+                0x10010104       0x3a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1001013e        0x2 
  .rodata.__func__.0
-                0x10010148       0x1a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10010162        0x2 
+                0x10010140       0x1a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1001015a        0x2 
  .rodata.__func__.1
-                0x10010164       0x17 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1001017b        0x1 
+                0x1001015c       0x17 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10010173        0x1 
  .rodata.__func__.2
-                0x1001017c       0x13 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1001018f        0x1 
+                0x10010174       0x13 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10010187        0x1 
  .rodata.__func__.3
-                0x10010190        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10010188        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.__func__.4
-                0x1001019c        0xf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100101ab        0x1 
+                0x10010194        0xf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100101a3        0x1 
  .rodata.__func__.5
-                0x100101ac       0x17 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100101c3        0x1 
+                0x100101a4       0x17 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100101bb        0x1 
  .rodata.__func__.6
-                0x100101c4       0x1a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100101de        0x2 
+                0x100101bc       0x1a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100101d6        0x2 
  .rodata.str1.4
-                0x100101e0       0xa5 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x100101d8       0xa5 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
                                 0x125 (size before relaxing)
- *fill*         0x10010285        0x3 
+ *fill*         0x1001027d        0x3 
  .rodata.__func__.1
-                0x10010288        0xb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- *fill*         0x10010293        0x1 
+                0x10010280        0xb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ *fill*         0x1001028b        0x1 
  .rodata.__func__.3
-                0x10010294       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x1001028c       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
  .rodata.__func__.4
-                0x100102ac       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- *fill*         0x100102c1        0x3 
+                0x100102a4       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ *fill*         0x100102b9        0x3 
  .rodata.repeating_timer_callback.str1.4
-                0x100102c4       0x67 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1001032b        0x1 
+                0x100102bc       0x67 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10010323        0x1 
  .rodata.timer_pool_entry_comparator.str1.4
-                0x1001032c       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1001034e        0x2 
+                0x10010324       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10010346        0x2 
  .rodata.ph_add_child_node.str1.4
-                0x10010350       0xb2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10010402        0x2 
+                0x10010348       0xb2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100103fa        0x2 
  .rodata.add_alarm_under_lock.str1.4
-                0x10010404       0x28 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x100103fc       0x28 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
                                  0x2b (size before relaxing)
  .rodata.alarm_pool_alarm_callback.str1.4
-                0x1001042c       0x98 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10010424       0x98 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
                                 0x118 (size before relaxing)
  .rodata.alarm_pool_get_default.str1.4
-                0x100104c4       0x21 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100104e5        0x3 
+                0x100104bc       0x21 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100104dd        0x3 
  .rodata.alarm_pool_cancel_alarm.str1.4
-                0x100104e8       0x27 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1001050f        0x1 
+                0x100104e0       0x27 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10010507        0x1 
  .rodata.sleep_until.str1.4
-                0x10010510       0x4d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1001055d        0x3 
+                0x10010508       0x4d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10010555        0x3 
  .rodata.__func__.1
-                0x10010560       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10010558       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
  .rodata.__func__.10
-                0x10010578       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1001058d        0x3 
+                0x10010570       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10010585        0x3 
  .rodata.__func__.11
-                0x10010590       0x1a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100105aa        0x2 
+                0x10010588       0x1a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100105a2        0x2 
  .rodata.__func__.12
-                0x100105ac        0xa CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100105b6        0x2 
+                0x100105a4        0xa CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100105ae        0x2 
  .rodata.__func__.3
-                0x100105b8       0x17 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100105cf        0x1 
+                0x100105b0       0x17 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100105c7        0x1 
  .rodata.__func__.4
-                0x100105d0       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100105e2        0x2 
+                0x100105c8       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100105da        0x2 
  .rodata.__func__.5
-                0x100105e4        0xd CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100105f1        0x3 
+                0x100105dc        0xd CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100105e9        0x3 
  .rodata.__func__.6
-                0x100105f4       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10010606        0x2 
+                0x100105ec       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100105fe        0x2 
  .rodata.__func__.7
-                0x10010608        0xf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10010617        0x1 
+                0x10010600        0xf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x1001060f        0x1 
  .rodata.__func__.8
-                0x10010618        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10010610        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
  .rodata.__func__.9
-                0x10010624       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10010639        0x7 
+                0x1001061c       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10010631        0x7 
  .rodata.at_the_end_of_time
-                0x10010640        0x8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
-                0x10010640                at_the_end_of_time
+                0x10010638        0x8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10010638                at_the_end_of_time
  .rodata.hardware_alarm_claim.str1.4
-                0x10010648       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10010640       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.busy_wait_us.str1.4
-                0x1001066a       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x1001066a        0x2 
+                0x10010662       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10010662        0x2 
  .rodata.hardware_alarm_set_target.str1.4
-                0x1001066c       0x81 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x100106ed        0x3 
+                0x10010664       0x81 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x100106e5        0x3 
  .rodata.__func__.0
-                0x100106f0       0x1a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x1001070a        0x2 
+                0x100106e8       0x1a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10010702        0x2 
  .rodata.__func__.1
-                0x1001070c       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10010704       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.ph_add_child_node.str1.4
-                0x10010721       0xb2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x10010721        0x3 
+                0x10010719       0xb2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x10010719        0x3 
  .rodata.ph_remove_any_head.str1.4
-                0x10010724       0xa8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1001071c       0xa8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
                                  0xbc (size before relaxing)
  .rodata.ph_remove_and_free_node.str1.4
-                0x100107cc       0x1e CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100107c4       0x1e CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
                                  0x26 (size before relaxing)
- *fill*         0x100107ea        0x2 
+ *fill*         0x100107e2        0x2 
  .rodata.__func__.0
-                0x100107ec       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100107e4       0x18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.__func__.1
-                0x10010804       0x13 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x10010817        0x1 
+                0x100107fc       0x13 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x1001080f        0x1 
  .rodata.__func__.2
-                0x10010818       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x1001082a        0x2 
+                0x10010810       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x10010822        0x2 
  .rodata.__func__.3
-                0x1001082c        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10010824        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.clock_configure.str1.4
-                0x10010838       0x73 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- *fill*         0x100108ab        0x1 
+                0x10010830       0x73 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ *fill*         0x100108a3        0x1 
  .rodata.__func__.1
-                0x100108ac       0x10 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x100108a4       0x10 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .rodata.pll_init.str1.4
-                0x100108bc      0x140 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x100108b4      0x140 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
  .rodata.__func__.0
-                0x100109fc        0x9 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- *fill*         0x10010a05        0x3 
+                0x100109f4        0x9 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ *fill*         0x100109fd        0x3 
  .rodata.__assert_func.str1.4
-                0x10010a08       0x3f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10010a00       0x3f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                  0x43 (size before relaxing)
- *fill*         0x10010a47        0x1 
+ *fill*         0x10010a3f        0x1 
  .rodata.runtime_init.str1.4
-                0x10010a48       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x10010ac5        0x3 
+                0x10010a40       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10010abd        0x3 
  .rodata.panic.str1.4
-                0x10010ac8       0x10 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10010ac0       0x10 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                  0x12 (size before relaxing)
  .rodata.__func__.2
-                0x10010ad8        0xd CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x10010ae5        0x3 
+                0x10010ad0        0xd CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10010add        0x3 
  .rodata._ftoa.str1.4
-                0x10010ae8       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x10010afd        0x3 
+                0x10010ae0       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x10010af5        0x3 
  .rodata._vsnprintf
-                0x10010b00      0x1e0 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10010af8      0x1e0 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.pow10.0
-                0x10010ce0       0x50 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10010cd8       0x50 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.__aeabi_double_init.str1.4
-                0x10010d30       0xb8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10010d28       0xb8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__func__.0
-                0x10010de8       0x14 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10010de0       0x14 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__aeabi_float_init.str1.4
-                0x10010dfc       0x96 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10010df4       0x96 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
                                  0x9a (size before relaxing)
- *fill*         0x10010e92        0x2 
+ *fill*         0x10010e8a        0x2 
  .rodata.__func__.0
-                0x10010e94       0x13 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- *fill*         0x10010ea7        0x1 
+                0x10010e8c       0x13 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ *fill*         0x10010e9f        0x1 
  .rodata.str1.4
-                0x10010ea8       0x48 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10010ea0       0x48 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x10010ef0        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10010ee8        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x10010efc        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10010ef4        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x10010f08        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10010f00        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.stdout_serialize_begin.str1.4
-                0x10010f14       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10010f0c       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .rodata.__func__.3
-                0x10010f14       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x10010f29        0x3 
+                0x10010f0c       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x10010f21        0x3 
  .rodata.crlf_str.2
-                0x10010f2c        0x2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x10010f2e        0x2 
+                0x10010f24        0x2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x10010f26        0x2 
  .rodata.str1.4
-                0x10010f30       0x2c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10010f28       0x2c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_33.4
-                0x10010f5c        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10010f54        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_34.5
-                0x10010f68        0x8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10010f60        0x8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.multicore_fifo_push_timeout_us.str1.4
-                0x10010f70       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10010f68       0x7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .rodata.multicore_lockout_start_block_until.str1.4
-                0x10010f70       0x79 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- *fill*         0x10010fe9        0x3 
+                0x10010f68       0x79 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ *fill*         0x10010fe1        0x3 
  .rodata.multicore_lockout_end_block_until.str1.4
-                0x10010fec       0x3c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10010fe4       0x3c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .rodata.multicore_launch_core1_with_stack.str1.4
-                0x10011028       0x19 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- *fill*         0x10011041        0x3 
+                0x10011020       0x19 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ *fill*         0x10011039        0x3 
  .rodata.__func__.0
-                0x10011044       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- *fill*         0x10011066        0x2 
+                0x1001103c       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ *fill*         0x1001105e        0x2 
  .rodata.__func__.1
-                0x10011068       0x24 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10011060       0x24 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .rodata.__func__.2
-                0x1001108c       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- *fill*         0x100110ae        0x2 
+                0x10011084       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ *fill*         0x100110a6        0x2 
  .rodata.__func__.3
-                0x100110b0       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- *fill*         0x100110c5        0x3 
+                0x100110a8       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ *fill*         0x100110bd        0x3 
  .rodata.capture_additional_rosc_samples.str1.4
-                0x100110c8      0x11f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+                0x100110c0      0x11f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
                                 0x1a1 (size before relaxing)
- *fill*         0x100111e7        0x1 
+ *fill*         0x100111df        0x1 
  .rodata.initialise_rand.str1.4
-                0x100111e8        0xa CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
- *fill*         0x100111f2        0x2 
+                0x100111e0        0xa CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+ *fill*         0x100111ea        0x2 
  .rodata.__func__.0
-                0x100111f4       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
- *fill*         0x10011209        0x3 
+                0x100111ec       0x15 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+ *fill*         0x10011201        0x3 
  .rodata.__func__.2
-                0x1001120c       0x20 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+                0x10011204       0x20 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
  .rodata.__func__.3
-                0x1001122c       0x10 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+                0x10011224       0x10 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
  .rodata.str1.4
-                0x1001123c      0x176 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- *fill*         0x100113b2        0x2 
+                0x10011234      0x176 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ *fill*         0x100113aa        0x2 
  .rodata.__func__.0
-                0x100113b4        0xd CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- *fill*         0x100113c1        0x3 
+                0x100113ac        0xd CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ *fill*         0x100113b9        0x3 
  .rodata.__func__.1
-                0x100113c4       0x14 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x100113bc       0x14 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .rodata.__func__.2
-                0x100113d8       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- *fill*         0x100113ea        0x2 
+                0x100113d0       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ *fill*         0x100113e2        0x2 
  .rodata._pio_find_offset_for_program.str1.4
-                0x100113ec       0x85 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- *fill*         0x10011471        0x3 
+                0x100113e4       0x85 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ *fill*         0x10011469        0x3 
  .rodata._pio_add_program_at_offset.str1.4
-                0x10011474       0x11 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- *fill*         0x10011485        0x3 
+                0x1001146c       0x11 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ *fill*         0x1001147d        0x3 
  .rodata.__func__.1
-                0x10011488       0x1d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- *fill*         0x100114a5        0x3 
+                0x10011480       0x1d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ *fill*         0x1001149d        0x3 
  .rodata._hw_endpoint_alloc.str1.4
-                0x100114a8       0xd1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- *fill*         0x10011579        0x3 
+                0x100114a0       0xd1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ *fill*         0x10011571        0x3 
  .rodata.str1.4
-                0x1001157c       0x14 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10011574       0x14 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.dcd_int_enable.str1.4
-                0x10011590        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x10011588        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.__func__.0
-                0x1001159c        0xe CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- *fill*         0x100115aa        0x2 
+                0x10011594        0xe CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ *fill*         0x100115a2        0x2 
  .rodata.__func__.1
-                0x100115ac        0xe CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- *fill*         0x100115ba        0x2 
+                0x100115a4        0xe CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ *fill*         0x100115b2        0x2 
  .rodata.__func__.2
-                0x100115bc       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- *fill*         0x100115ce        0x2 
+                0x100115b4       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ *fill*         0x100115c6        0x2 
  .rodata.__func__.3
-                0x100115d0       0x10 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x100115c8       0x10 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.__func__.5
-                0x100115e0        0xf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- *fill*         0x100115ef        0x1 
+                0x100115d8        0xf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ *fill*         0x100115e7        0x1 
  .rodata.__func__.6
-                0x100115f0       0x13 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- *fill*         0x10011603        0x1 
+                0x100115e8       0x13 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ *fill*         0x100115fb        0x1 
  .rodata.__func__.7
-                0x10011604        0x9 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- *fill*         0x1001160d        0x3 
+                0x100115fc        0x9 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ *fill*         0x10011605        0x3 
  .rodata.str1.4
-                0x10011610       0xf9 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x10011608       0xf9 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
                                 0x103 (size before relaxing)
- *fill*         0x10011709        0x3 
+ *fill*         0x10011701        0x3 
  .rodata.__func__.0
-                0x1001170c        0xf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x1001171b        0x1 
+                0x10011704        0xf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x10011713        0x1 
  .rodata.process_get_descriptor
-                0x1001171c       0x40 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10011714       0x40 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.process_control_request
-                0x1001175c       0x28 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x10011754       0x28 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.tud_task_ext
-                0x10011784       0x24 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x1001177c       0x24 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x100117a8       0x48 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x100117a0       0x48 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.hidd_control_xfer_cb
-                0x100117f0       0x30 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+                0x100117e8       0x30 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
  .rodata.str1.4
-                0x10011820        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+                0x10011818        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .rodata.__bi_142.0
-                0x10011824        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+                0x1001181c        0xc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .rodata.__bi_152.1
-                0x10011830        0x8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+                0x10011828        0x8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .rodata.i2c_set_baudrate.str1.4
-                0x10011838       0x79 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- *fill*         0x100118b1        0x3 
+                0x10011830       0x79 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ *fill*         0x100118a9        0x3 
  .rodata.__func__.0
-                0x100118b4       0x11 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x100118c8                . = ALIGN (0x4)
- *fill*         0x100118c5        0x3 
+                0x100118ac       0x11 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x100118c0                . = ALIGN (0x4)
+ *fill*         0x100118bd        0x3 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x100118c8                . = ALIGN (0x4)
+                0x100118c0                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x100118c8                __exidx_start = .
+                0x100118c0                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x100118c8                __exidx_end = .
-                0x100118c8                . = ALIGN (0x4)
-                0x100118c8                __binary_info_start = .
+                0x100118c0                __exidx_end = .
+                0x100118c0                . = ALIGN (0x4)
+                0x100118c0                __binary_info_start = .
 
-.binary_info    0x100118c8       0x2c
+.binary_info    0x100118c0       0x2c
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x100118c8        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100118c0        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x100118cc        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100118c4        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x100118d0        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100118c8        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x100118d4        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100118cc        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x100118d8        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100118d0        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x100118dc        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100118d4        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x100118e0        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100118d8        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr142
-                0x100118e4        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+                0x100118dc        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .binary_info.keep.__bi_ptr152
-                0x100118e8        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+                0x100118e0        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr33
-                0x100118ec        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100118e4        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr34
-                0x100118f0        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x100118f4                __binary_info_end = .
+                0x100118e8        0x4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100118ec                __binary_info_end = .
 
-.rel.dyn        0x100118f4        0x0
- .rel.iplt      0x100118f4        0x0 c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x100118f4                . = ALIGN (0x4)
+.rel.dyn        0x100118ec        0x0
+ .rel.iplt      0x100118ec        0x0 c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x100118ec                . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -4018,7 +4016,7 @@ LOAD c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.
                 0x20000000       0xc0 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0     0x13b8 load address 0x100118f4
+.data           0x200000c0     0x13b8 load address 0x100118ec
                 0x200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -4235,13 +4233,13 @@ LOAD c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.
  *(.jcr)
                 0x20001478                . = ALIGN (0x4)
                 0x20001478                __data_end__ = .
-                0x100118f4                __etext = LOADADDR (.data)
+                0x100118ec                __etext = LOADADDR (.data)
 
-.igot.plt       0x20001478        0x0 load address 0x10012cac
+.igot.plt       0x20001478        0x0 load address 0x10012ca4
  .igot.plt      0x20001478        0x0 c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x20001478       0x20 load address 0x10012cac
+                0x20001478       0x20 load address 0x10012ca4
                 0x20001478                . = ALIGN (0x4)
  *(.uninitialized_data*)
  .uninitialized_data.ram_hash
@@ -4251,19 +4249,19 @@ LOAD c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.
  .uninitialized_data.rosc_samples
                 0x20001490        0x8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
 
-.scratch_x      0x20040000        0x0 load address 0x10012cac
+.scratch_x      0x20040000        0x0 load address 0x10012ca4
                 0x20040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                . = ALIGN (0x4)
                 0x20040000                __scratch_x_end__ = .
-                0x10012cac                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10012ca4                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10012cac
+.scratch_y      0x20041000        0x0 load address 0x10012ca4
                 0x20041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                . = ALIGN (0x4)
                 0x20041000                __scratch_y_end__ = .
-                0x10012cac                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10012ca4                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x20001498     0x1b5c
                 0x20001498                . = ALIGN (0x4)
@@ -4773,8 +4771,8 @@ LOAD c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x10012cac        0x0
-                0x10012cac                PROVIDE (__flash_binary_end = .)
+.flash_end      0x10012ca4        0x0
+                0x10012ca4                PROVIDE (__flash_binary_end = .)
                 0x20040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -4887,7 +4885,7 @@ LOAD CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v
 LOAD CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 LOAD CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
 LOAD CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-LOAD C:\Users\Mitch\AppData\Local\Temp\ccooyBJC.o
+LOAD C:\Users\Mitch\AppData\Local\Temp\ccIeQ66h.o
 LOAD c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++.a
 LOAD c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libm.a
 START GROUP
@@ -5076,7 +5074,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000dd2       0x2c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .ARM.attributes
-                0x00000dfe       0x22 C:\Users\Mitch\AppData\Local\Temp\ccooyBJC.o
+                0x00000dfe       0x22 C:\Users\Mitch\AppData\Local\Temp\ccIeQ66h.o
  .ARM.attributes
                 0x00000e20       0x1e c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
@@ -5157,7 +5155,7 @@ LOAD linker stubs
  .comment       0x00000049       0x4a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .comment       0x00000049       0x4a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_info     0x00000000    0x58a71
+.debug_info     0x00000000    0x58a58
  .debug_info    0x00000000     0x19a5 CMakeFiles/SUPERGAMEPAD_RP2040.dir/src/main.c.obj
  .debug_info    0x000019a5     0x1e23 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja.c.obj
  .debug_info    0x000037c8      0xefe CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja_settings.c.obj
@@ -5185,62 +5183,62 @@ LOAD linker stubs
  .debug_info    0x0001c9dc      0xa4e CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/swpro.c.obj
  .debug_info    0x0001d42a     0x14ac CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/webusb.c.obj
  .debug_info    0x0001e8d6      0x70e CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/xinput.c.obj
- .debug_info    0x0001efe4      0xfcb CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
- .debug_info    0x0001ffaf     0x187e CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_info    0x0002182d      0x1e3 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_info    0x00021a10      0x6be CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_info    0x000220ce      0x58e CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_info    0x0002265c     0x1c9e CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_info    0x000242fa      0x1a4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_info    0x0002449e     0x20d5 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_info    0x00026573      0x2d1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
- .debug_info    0x00026844     0x4068 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- .debug_info    0x0002a8ac      0x813 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/timeout_helper.c.obj
- .debug_info    0x0002b0bf     0x13f0 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_info    0x0002c4af     0x123b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_info    0x0002d6ea      0xdd2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_info    0x0002e4bc      0xfcf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_info    0x0002f48b      0x51b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_info    0x0002f9a6      0x4ee CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_info    0x0002fe94      0x1d8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_info    0x0003006c     0x1053 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_info    0x000310bf     0x1a5f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_info    0x00032b1e       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_info    0x00032b40      0x27c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_info    0x00032dbc       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_info    0x00032dde       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_info    0x00032e00      0x2d1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_info    0x000330d1     0x5586 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
- .debug_info    0x00038657       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_info    0x00038679       0x26 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_info    0x0003869f       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_info    0x000386c1      0x2eb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_info    0x000389ac     0x5031 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
- .debug_info    0x0003d9dd       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_info    0x0003d9ff      0x4a6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .debug_info    0x0003dea5       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_info    0x0003dec7       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_info    0x0003dee9      0x2fb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_info    0x0003e1e4     0x1827 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_info    0x0003fa0b     0x104f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_info    0x00040a5a     0x1d18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- .debug_info    0x00042772     0x14f6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
- .debug_info    0x00043c68      0x257 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- .debug_info    0x00043ebf      0xf3a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_info    0x00044df9     0x227f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .debug_info    0x00047078     0x2080 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .debug_info    0x000490f8      0xfe4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .debug_info    0x0004a0dc     0x3c25 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .debug_info    0x0004dd01      0x8be CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
- .debug_info    0x0004e5bf     0x19f3 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- .debug_info    0x0004ffb2     0x160d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
- .debug_info    0x000515bf     0x1021 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
- .debug_info    0x000525e0     0x14db CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
- .debug_info    0x00053abb     0x2851 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
- .debug_info    0x0005630c     0x115f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
- .debug_info    0x0005746b     0x1606 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .debug_info    0x0001efe4      0xfb2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
+ .debug_info    0x0001ff96     0x187e CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_info    0x00021814      0x1e3 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_info    0x000219f7      0x6be CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_info    0x000220b5      0x58e CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_info    0x00022643     0x1c9e CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_info    0x000242e1      0x1a4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_info    0x00024485     0x20d5 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_info    0x0002655a      0x2d1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
+ .debug_info    0x0002682b     0x4068 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_info    0x0002a893      0x813 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+ .debug_info    0x0002b0a6     0x13f0 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_info    0x0002c496     0x123b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_info    0x0002d6d1      0xdd2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_info    0x0002e4a3      0xfcf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_info    0x0002f472      0x51b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_info    0x0002f98d      0x4ee CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_info    0x0002fe7b      0x1d8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_info    0x00030053     0x1053 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_info    0x000310a6     0x1a5f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_info    0x00032b05       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_info    0x00032b27      0x27c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_info    0x00032da3       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_info    0x00032dc5       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_info    0x00032de7      0x2d1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_info    0x000330b8     0x5586 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+ .debug_info    0x0003863e       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_info    0x00038660       0x26 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_info    0x00038686       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_info    0x000386a8      0x2eb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_info    0x00038993     0x5031 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+ .debug_info    0x0003d9c4       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_info    0x0003d9e6      0x4a6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ .debug_info    0x0003de8c       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_info    0x0003deae       0x22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_info    0x0003ded0      0x2fb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_info    0x0003e1cb     0x1827 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_info    0x0003f9f2     0x104f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_info    0x00040a41     0x1d18 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ .debug_info    0x00042759     0x14f6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+ .debug_info    0x00043c4f      0x257 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_info    0x00043ea6      0xf3a CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_info    0x00044de0     0x227f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .debug_info    0x0004705f     0x2080 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .debug_info    0x000490df      0xfe4 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ .debug_info    0x0004a0c3     0x3c25 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .debug_info    0x0004dce8      0x8be CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+ .debug_info    0x0004e5a6     0x19f3 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ .debug_info    0x0004ff99     0x160d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+ .debug_info    0x000515a6     0x1021 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+ .debug_info    0x000525c7     0x14db CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ .debug_info    0x00053aa2     0x2851 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+ .debug_info    0x000562f3     0x115f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+ .debug_info    0x00057452     0x1606 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_abbrev   0x00000000     0xe943
+.debug_abbrev   0x00000000     0xe936
  .debug_abbrev  0x00000000      0x3d1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/src/main.c.obj
  .debug_abbrev  0x000003d1      0x452 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja.c.obj
  .debug_abbrev  0x00000823      0x39d CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja_settings.c.obj
@@ -5268,60 +5266,60 @@ LOAD linker stubs
  .debug_abbrev  0x00005267      0x22f CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/swpro.c.obj
  .debug_abbrev  0x00005496      0x41c CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/webusb.c.obj
  .debug_abbrev  0x000058b2      0x216 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/xinput.c.obj
- .debug_abbrev  0x00005ac8      0x33b CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
- .debug_abbrev  0x00005e03      0x379 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_abbrev  0x0000617c       0xeb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_abbrev  0x00006267      0x2e9 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_abbrev  0x00006550      0x21b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_abbrev  0x0000676b      0x4e7 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_abbrev  0x00006c52      0x116 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_abbrev  0x00006d68      0x397 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_abbrev  0x000070ff      0x1aa CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
- .debug_abbrev  0x000072a9      0x571 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- .debug_abbrev  0x0000781a      0x243 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/timeout_helper.c.obj
- .debug_abbrev  0x00007a5d      0x3b8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_abbrev  0x00007e15      0x297 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_abbrev  0x000080ac      0x31c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_abbrev  0x000083c8      0x3c7 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_abbrev  0x0000878f      0x1ea CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_abbrev  0x00008979      0x1a8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_abbrev  0x00008b21      0x109 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_abbrev  0x00008c2a      0x4cb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_abbrev  0x000090f5      0x384 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_abbrev  0x00009479       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_abbrev  0x0000948b      0x13b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_abbrev  0x000095c6       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_abbrev  0x000095d8       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_abbrev  0x000095ea      0x179 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_abbrev  0x00009763      0x2e3 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
- .debug_abbrev  0x00009a46       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_abbrev  0x00009a58       0x14 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_abbrev  0x00009a6c       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_abbrev  0x00009a7e      0x18c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_abbrev  0x00009c0a      0x2bb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
- .debug_abbrev  0x00009ec5       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_abbrev  0x00009ed7      0x1cf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .debug_abbrev  0x0000a0a6       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_abbrev  0x0000a0b8       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_abbrev  0x0000a0ca       0xad CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_abbrev  0x0000a177      0x4a5 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_abbrev  0x0000a61c      0x3e8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_abbrev  0x0000aa04      0x49f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- .debug_abbrev  0x0000aea3      0x47e CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
- .debug_abbrev  0x0000b321      0x163 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- .debug_abbrev  0x0000b484      0x2b6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_abbrev  0x0000b73a      0x483 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .debug_abbrev  0x0000bbbd      0x4ff CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .debug_abbrev  0x0000c0bc      0x40d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .debug_abbrev  0x0000c4c9      0x561 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .debug_abbrev  0x0000ca2a      0x309 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
- .debug_abbrev  0x0000cd33      0x45f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- .debug_abbrev  0x0000d192      0x3d3 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
- .debug_abbrev  0x0000d565      0x354 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
- .debug_abbrev  0x0000d8b9      0x41c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
- .debug_abbrev  0x0000dcd5      0x437 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
- .debug_abbrev  0x0000e10c      0x3c1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
- .debug_abbrev  0x0000e4cd      0x476 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .debug_abbrev  0x00005ac8      0x32e CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
+ .debug_abbrev  0x00005df6      0x379 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_abbrev  0x0000616f       0xeb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_abbrev  0x0000625a      0x2e9 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_abbrev  0x00006543      0x21b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_abbrev  0x0000675e      0x4e7 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_abbrev  0x00006c45      0x116 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_abbrev  0x00006d5b      0x397 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_abbrev  0x000070f2      0x1aa CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
+ .debug_abbrev  0x0000729c      0x571 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_abbrev  0x0000780d      0x243 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+ .debug_abbrev  0x00007a50      0x3b8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_abbrev  0x00007e08      0x297 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_abbrev  0x0000809f      0x31c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_abbrev  0x000083bb      0x3c7 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_abbrev  0x00008782      0x1ea CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_abbrev  0x0000896c      0x1a8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_abbrev  0x00008b14      0x109 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_abbrev  0x00008c1d      0x4cb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_abbrev  0x000090e8      0x384 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_abbrev  0x0000946c       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_abbrev  0x0000947e      0x13b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_abbrev  0x000095b9       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_abbrev  0x000095cb       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_abbrev  0x000095dd      0x179 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_abbrev  0x00009756      0x2e3 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+ .debug_abbrev  0x00009a39       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_abbrev  0x00009a4b       0x14 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_abbrev  0x00009a5f       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_abbrev  0x00009a71      0x18c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_abbrev  0x00009bfd      0x2bb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+ .debug_abbrev  0x00009eb8       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_abbrev  0x00009eca      0x1cf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ .debug_abbrev  0x0000a099       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_abbrev  0x0000a0ab       0x12 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_abbrev  0x0000a0bd       0xad CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_abbrev  0x0000a16a      0x4a5 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_abbrev  0x0000a60f      0x3e8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_abbrev  0x0000a9f7      0x49f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ .debug_abbrev  0x0000ae96      0x47e CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+ .debug_abbrev  0x0000b314      0x163 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_abbrev  0x0000b477      0x2b6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_abbrev  0x0000b72d      0x483 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .debug_abbrev  0x0000bbb0      0x4ff CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .debug_abbrev  0x0000c0af      0x40d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ .debug_abbrev  0x0000c4bc      0x561 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .debug_abbrev  0x0000ca1d      0x309 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+ .debug_abbrev  0x0000cd26      0x45f CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ .debug_abbrev  0x0000d185      0x3d3 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+ .debug_abbrev  0x0000d558      0x354 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+ .debug_abbrev  0x0000d8ac      0x41c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ .debug_abbrev  0x0000dcc8      0x437 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+ .debug_abbrev  0x0000e0ff      0x3c1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+ .debug_abbrev  0x0000e4c0      0x476 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
 .debug_loc      0x00000000    0x399a5
  .debug_loc     0x00000000      0x946 CMakeFiles/SUPERGAMEPAD_RP2040.dir/src/main.c.obj
@@ -5638,7 +5636,7 @@ LOAD linker stubs
  .debug_ranges  0x00008830      0x250 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .debug_ranges  0x00008a80      0x198 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_line     0x00000000    0x33a6b
+.debug_line     0x00000000    0x33a09
  .debug_line    0x00000000      0xaee CMakeFiles/SUPERGAMEPAD_RP2040.dir/src/main.c.obj
  .debug_line    0x00000aee      0xc26 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja.c.obj
  .debug_line    0x00001714      0x83c CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/hoja_settings.c.obj
@@ -5666,60 +5664,60 @@ LOAD linker stubs
  .debug_line    0x0000f11d      0x506 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/swpro.c.obj
  .debug_line    0x0000f623      0xa9f CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/webusb.c.obj
  .debug_line    0x000100c2      0x507 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/xinput.c.obj
- .debug_line    0x000105c9      0x8f2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
- .debug_line    0x00010ebb      0xd98 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_line    0x00011c53      0x2d6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_line    0x00011f29      0x4e2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_line    0x0001240b      0x4df CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_line    0x000128ea     0x112d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_line    0x00013a17      0x28e CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_line    0x00013ca5     0x116d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_line    0x00014e12      0x319 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
- .debug_line    0x0001512b     0x1cb7 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- .debug_line    0x00016de2      0x5f7 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/timeout_helper.c.obj
- .debug_line    0x000173d9      0xd04 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_line    0x000180dd      0x8e8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_line    0x000189c5      0x9ba CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_line    0x0001937f      0xae6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_line    0x00019e65      0x60c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_line    0x0001a471      0x45b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_line    0x0001a8cc      0x2ff CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_line    0x0001abcb      0xc0b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_line    0x0001b7d6     0x1254 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_line    0x0001ca2a      0x163 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_line    0x0001cb8d      0x26b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_line    0x0001cdf8      0x2ec CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_line    0x0001d0e4      0x441 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_line    0x0001d525      0x3bc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_line    0x0001d8e1     0x2caf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
- .debug_line    0x00020590      0x6b9 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_line    0x00020c49       0xb3 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_line    0x00020cfc      0x3f7 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_line    0x000210f3      0x3ae CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_line    0x000214a1     0x2805 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
- .debug_line    0x00023ca6      0x1e3 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_line    0x00023e89      0x42c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .debug_line    0x000242b5       0xdd CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_line    0x00024392       0xeb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_line    0x0002447d      0x211 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_line    0x0002468e      0xfbd CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_line    0x0002564b      0xbeb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_line    0x00026236     0x10ff CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- .debug_line    0x00027335      0xc6b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
- .debug_line    0x00027fa0      0x410 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- .debug_line    0x000283b0      0x866 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_line    0x00028c16     0x1156 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .debug_line    0x00029d6c      0xf71 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .debug_line    0x0002acdd      0xadf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .debug_line    0x0002b7bc     0x20a6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .debug_line    0x0002d862      0x4bf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
- .debug_line    0x0002dd21      0xeb8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- .debug_line    0x0002ebd9      0xb22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
- .debug_line    0x0002f6fb      0x962 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
- .debug_line    0x0003005d      0xc5b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
- .debug_line    0x00030cb8     0x15a1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
- .debug_line    0x00032259      0xa95 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
- .debug_line    0x00032cee      0xd7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .debug_line    0x000105c9      0x890 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
+ .debug_line    0x00010e59      0xd98 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_line    0x00011bf1      0x2d6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_line    0x00011ec7      0x4e2 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_line    0x000123a9      0x4df CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_line    0x00012888     0x112d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_line    0x000139b5      0x28e CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_line    0x00013c43     0x116d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_line    0x00014db0      0x319 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
+ .debug_line    0x000150c9     0x1cb7 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_line    0x00016d80      0x5f7 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+ .debug_line    0x00017377      0xd04 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_line    0x0001807b      0x8e8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_line    0x00018963      0x9ba CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_line    0x0001931d      0xae6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_line    0x00019e03      0x60c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_line    0x0001a40f      0x45b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_line    0x0001a86a      0x2ff CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_line    0x0001ab69      0xc0b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_line    0x0001b774     0x1254 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_line    0x0001c9c8      0x163 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_line    0x0001cb2b      0x26b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_line    0x0001cd96      0x2ec CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_line    0x0001d082      0x441 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_line    0x0001d4c3      0x3bc CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_line    0x0001d87f     0x2caf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+ .debug_line    0x0002052e      0x6b9 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_line    0x00020be7       0xb3 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_line    0x00020c9a      0x3f7 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_line    0x00021091      0x3ae CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_line    0x0002143f     0x2805 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+ .debug_line    0x00023c44      0x1e3 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_line    0x00023e27      0x42c CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ .debug_line    0x00024253       0xdd CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_line    0x00024330       0xeb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_line    0x0002441b      0x211 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_line    0x0002462c      0xfbd CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_line    0x000255e9      0xbeb CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_line    0x000261d4     0x10ff CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ .debug_line    0x000272d3      0xc6b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+ .debug_line    0x00027f3e      0x410 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_line    0x0002834e      0x866 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_line    0x00028bb4     0x1156 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ .debug_line    0x00029d0a      0xf71 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .debug_line    0x0002ac7b      0xadf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ .debug_line    0x0002b75a     0x20a6 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .debug_line    0x0002d800      0x4bf CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+ .debug_line    0x0002dcbf      0xeb8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ .debug_line    0x0002eb77      0xb22 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+ .debug_line    0x0002f699      0x962 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+ .debug_line    0x0002fffb      0xc5b CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ .debug_line    0x00030c56     0x15a1 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+ .debug_line    0x000321f7      0xa95 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+ .debug_line    0x00032c8c      0xd7d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
 .debug_str      0x00000000     0xcf78
  .debug_str     0x00000000      0x8ed CMakeFiles/SUPERGAMEPAD_RP2040.dir/src/main.c.obj
@@ -5777,7 +5775,7 @@ LOAD linker stubs
  .debug_str     0x00005912       0xfb CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/xinput.c.obj
                                 0x52e (size before relaxing)
  .debug_str     0x00005a0d       0xc8 CMakeFiles/SUPERGAMEPAD_RP2040.dir/lib/HOJA-LIB-RP2040/src/devices/btinput.c.obj
-                                0x8c1 (size before relaxing)
+                                0x8af (size before relaxing)
  .debug_str     0x00005ad5      0x4e3 CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
                                 0xa32 (size before relaxing)
  .debug_str     0x00005fb8       0x9d CMakeFiles/SUPERGAMEPAD_RP2040.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj

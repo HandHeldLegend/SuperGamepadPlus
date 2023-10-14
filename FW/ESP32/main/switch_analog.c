@@ -27,7 +27,7 @@ void switch_analog_calibration_init()
 
 void switch_analog_decode(uint8_t s0, uint8_t s1, uint8_t s2, uint16_t *out_lower, uint16_t *out_upper)
 {
-  out_lower[0] = (s1 << 8) & 0xF00 | s0;
+  out_lower[0] = ((s1 << 8) & 0xF00) | s0;
   out_upper[0] = ( s2 << 4) | (s1 >> 4);
 }
 

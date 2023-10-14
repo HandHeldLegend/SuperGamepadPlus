@@ -12,7 +12,7 @@
         "interface/ftdi/esp32_devkitj_v1.cfg",
         "target/esp32.cfg"
     ],
-    "idf.portWin": "COM6",
+    "idf.portWin": "COM7",
     "idf.pythonBinPathWin": "C:\\Users\\Mitch\\.espressif\\python_env\\idf5.1_py3.11_env\\Scripts\\python.exe",
     "idf.toolsPathWin": "C:\\Users\\Mitch\\.espressif",
     "idf.flashType": "UART",
@@ -24,6 +24,9 @@
         "esp_hid_common.h": "c",
         "util_bt_hid.h": "c",
         "core_bt_xinput.h": "c",
-        "main.h": "c"
+        "main.h": "c",
+        "hoja_includes.h": "c",
+        "switch_commands.h": "c",
+        "switch_spi.h": "c"
     }
 }

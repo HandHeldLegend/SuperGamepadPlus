@@ -4,20 +4,16 @@
 // Include any necessary includes from HOJA backend
 #include "hoja_includes.h"
 
-extern ns_subcore_t _ns_subcore;
-extern uint8_t ns_hostAddress[6];
-extern bool ns_connected;
+extern sw_input_s _switch_input_data;
 
-hoja_err_t core_ns_set_subcore(ns_subcore_t subcore);
+void ns_controller_setinputreportmode(uint8_t report_mode);
 
 // Start the Nintendo Switch controller core
-hoja_err_t core_ns_start(void);
+int core_bt_switch_start();
 
 // Stop the Nintendo Switch controller core
-void core_ns_stop(void);
+void core_bt_switch_stop(void);
 
-hoja_err_t ns_savepairing(uint8_t* host_addr);
-
-hoja_err_t ns_startpairing(void);
+void switch_bt_sendinput(i2cinput_input_s *input);
 
 #endif

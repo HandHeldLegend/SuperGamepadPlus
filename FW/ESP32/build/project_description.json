@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "ESP32",
-    "project_version":    "9341abc-dirty",
+    "project_version":    "d273bcc-dirty",
     "project_path":       "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32",
     "idf_path":           "C:/Users/Mitch/esp/esp-idf",
     "build_dir":          "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/build",
@@ -790,8 +790,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/main.c", "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/core_bt_xinput.c", "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/esp_hid_gap.c", "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/util_bt_hid.c", "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/rsc_descriptors.c" ],
-            "include_dirs": [ "." ]
+            "sources": [ "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/main.c", "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/core_bt_xinput.c", "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/core_bt_switch.c", "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/esp_hid_gap.c", "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/util_bt_hid.c", "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/rsc_descriptors.c", "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/switch_analog.c", "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/switch_commands.c", "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/ESP32/main/switch_spi.c" ],
+            "include_dirs": [ ".", "include", "include/switch" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",

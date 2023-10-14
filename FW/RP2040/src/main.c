@@ -145,7 +145,7 @@ int main()
 
         hoja_config_t _config = {
             .input_method   = INPUT_METHOD_BLUETOOTH,
-            .input_mode     = INPUT_MODE_XINPUT,
+            .input_mode     = INPUT_MODE_SWPRO,
         };
 
         // Release ESP to be enabled
@@ -157,7 +157,8 @@ int main()
         gpio_put(PGPIO_BUTTON_USB_EN, 1);
         sleep_ms(100);
         gpio_put(PGPIO_BUTTON_USB_EN, 0);
-        sleep_ms(500);
+
+        sleep_ms(5000);
         hoja_init(&_config);
     }
 }

@@ -4,7 +4,6 @@
 #include "hoja_includes.h"
 
 #define SW_OUT_ID_RUMBLE_CMD 0x01
-#define SW_OUT_ID_INFO  0x80
 #define SW_OUT_ID_RUMBLE 0x10
 
 #define SW_CMD_GET_STATE        0x00
@@ -26,13 +25,19 @@
 #define SW_CMD_GET_PLAYER       0x31
 #define SW_CMD_33               0x33
 
-#define SW_REPORT_SIZE 64
+void switch_rumble_translate(const uint8_t *data);
+void ns_report_handler(uint8_t report_id, uint8_t *data, uint16_t len);
 
-// Commands for setting report data
+void ns_report_clear(uint8_t *buffer, uint16_t size);
+void ns_report_setack(uint8_t ack);
+void ns_report_setsubcmd(uint8_t *buffer, uint8_t command);
+void ns_report_settimer(uint8_t *buffer);
+void ns_report_setbattconn(uint8_t *buffer);
+void ns_report_sub_setdevinfo(uint8_t *buffer);
+void ns_report_sub_triggertime(uint8_t *buffer, uint16_t time_10_ms);
+void ns_report_setinputreport_full(uint8_t *buffer, sw_input_s *input_data);
+void ns_report_bulkset(uint8_t *buffer, uint8_t start_idx, uint8_t* data, uint8_t len);
 
-void rumble_translate(const uint8_t *data);
-void switch_commands_process(sw_input_s *input_data);
-void switch_commands_future_handle(uint8_t command_id, const uint8_t *data, uint16_t len);
-void switch_commands_bulkset(uint8_t start_idx, uint8_t* data, uint8_t len);
+void _ns_report_setinputreport_short(uint8_t *buffer);
 
 #endif

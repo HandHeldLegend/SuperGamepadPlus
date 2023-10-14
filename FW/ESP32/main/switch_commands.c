@@ -1,62 +1,41 @@
 #include "switch_commands.h"
 
-// This C file handles various Switch gamepad commands (OUT reports)
-uint8_t _switch_in_command_buffer[64] = {0};
-uint8_t _switch_in_report_id = 0x00;
-uint16_t _switch_in_command_len = 64;
-bool _switch_in_command_got = false;
+uint8_t _switch_input_buffer[64] = {0};
+uint8_t _switch_input_report_id = 0x00;
 
-uint8_t _switch_reporting_mode = 0x3F;
-
-uint8_t _switch_command_buffer[64] = {0};
-uint8_t _switch_command_report_id = 0x00;
-//uint8_t _switch_mac_address[6] = {0};
-uint8_t _switch_ltk[16] = {0};
-
-void generate_ltk()
+void ns_report_clear(uint8_t *buffer, uint16_t size)
 {
-  printf("Generated LTK: ");
-  for(uint8_t i = 0; i < 16; i++)
-  {
-    _switch_ltk[i] = get_rand_32() & 0xFF;
-    printf("%X : ", _switch_ltk[i]);
-  }
-  printf("\n");
+  memset(buffer, 0, size);
 }
 
-void clear_report()
+void ns_report_setid(uint8_t report_id)
 {
-  memset(_switch_command_buffer, 0, sizeof(_switch_command_buffer));
+  _switch_input_report_id = report_id;
 }
 
-void set_report_id(uint8_t report_id)
+void ns_report_setack(uint8_t ack)
 {
-  _switch_command_report_id = report_id;
+  _switch_input_buffer[12] = ack;
 }
 
-void set_ack(uint8_t ack)
+void ns_report_setsubcmd(uint8_t *buffer, uint8_t command)
 {
-  _switch_command_buffer[12] = ack;
+  buffer[13] = command;
 }
 
-void set_command(uint8_t command)
-{
-  _switch_command_buffer[13] = command;
-}
-
-void set_timer()
+void ns_report_settimer(uint8_t *buffer)
 {
   static int16_t _switch_timer = 0;
-  _switch_command_buffer[0] = (uint8_t) _switch_timer;
+  buffer[0] = (uint8_t) _switch_timer;
   //printf("Td=%d \n", _switch_timer);
-  _switch_timer+=3;
+  _switch_timer+=1;
   if (_switch_timer > 0xFF)
   {
     _switch_timer -= 0xFF;
   }
 }
 
-void set_battconn()
+void ns_report_setbattconn(uint8_t *buffer)
 {
   typedef union
   {
@@ -70,20 +49,20 @@ void set_battconn()
 
   bat_status_u s = {
     .bat_lvl = 8,
-    .connection = 1
+    .connection = 0
   };
   // Always set to USB connected
-  _switch_command_buffer[1] = s.bat_status;
+  buffer[1] = s.bat_status;
 }
 
-void set_devinfo()
+void ns_report_sub_setdevinfo(uint8_t *buffer)
 {
   /* New firmware causes issue with gyro needs more research
-  _switch_command_buffer[14] = 0x04; // NS Firmware primary   (4.x)
-  _switch_command_buffer[15] = 0x33; // NS Firmware secondary (x.21) */
+  _switch_input_buffer[14] = 0x04; // NS Firmware primary   (4.x)
+  _switch_input_buffer[15] = 0x33; // NS Firmware secondary (x.21) */
 
-  _switch_command_buffer[14] = 0x03; // NS Firmware primary   (3.x)
-  _switch_command_buffer[15] = 72; // NS Firmware secondary (x.72)
+  buffer[14] = 0x03; // NS Firmware primary   (3.x)
+  buffer[15] = 0x80; // NS Firmware secondary (x.72)
 
   // Procon   - 0x03, 0x02
   // N64      - 0x0C, 0x11
@@ -91,16 +70,22 @@ void set_devinfo()
   // Famicom  - 0x07, 0x02
   // NES      - 0x09, 0x02
   // Genesis  - 0x0D, 0x02
-  _switch_command_buffer[16] = 0x03; // Controller ID primary (Pro Controller)
-  _switch_command_buffer[17] = 0x02; // Controller ID secondary
+  buffer[16] = 0x03; // Controller ID primary (Pro Controller)
+  buffer[17] = 0x02; // Controller ID secondary
 
-  /*_switch_command_buffer[18-23] = MAC ADDRESS;*/
+  /*_switch_input_buffer[18-23] = MAC ADDRESS;*/
+  buffer[18] = global_loaded_settings.device_mac[0];
+  buffer[19] = global_loaded_settings.device_mac[1];
+  buffer[20] = global_loaded_settings.device_mac[2];
+  buffer[21] = global_loaded_settings.device_mac[3];
+  buffer[22] = global_loaded_settings.device_mac[4];
+  buffer[23] = global_loaded_settings.device_mac[5];
 
-  _switch_command_buffer[24] = 0x01;
-  _switch_command_buffer[25] = 0x02; // It's 2 now? Ok.
+  buffer[24] = 0x00;
+  buffer[25] = 0x02; // It's 2 now? Ok.
 }
 
-void set_sub_triggertime(uint16_t time_10_ms)
+void ns_report_sub_triggertime(uint8_t *buffer, uint16_t time_10_ms)
 {
   uint8_t upper_ms = 0xFF & time_10_ms;
   uint8_t lower_ms = (0xFF00 & time_10_ms) >> 8;
@@ -116,16 +101,10 @@ void set_sub_triggertime(uint16_t time_10_ms)
 
   for(uint8_t i = 0; i < 14; i+=2)
   {
-      _switch_command_buffer[14 + i] = upper_ms;
-      _switch_command_buffer[15 + i] = lower_ms;
+      buffer[14 + i] = upper_ms;
+      buffer[15 + i] = lower_ms;
   }
 }
-
-void set_shipmode(uint8_t ship_mode)
-{
-  // Unhandled.
-}
-
 
 bool shouldControllerRumble(const uint8_t *data) {
 
@@ -139,14 +118,8 @@ bool shouldControllerRumble(const uint8_t *data) {
     return ( (hba>1) && !hbd) || ((lba>0x40) && !lbd);
 }
 
-float _get_rumble_intensity(const uint8_t *data) {
-
-}
-
-uint8_t test[] = {0x7a, 0xf8, 0x62, 0x80};
-
 // Translate and handle rumble
-void rumble_translate(const uint8_t *data)
+void switch_rumble_translate(const uint8_t *data)
 { 
     if(shouldControllerRumble(data))
     {
@@ -156,171 +129,115 @@ void rumble_translate(const uint8_t *data)
       float iu = (float) upper / 128.0f;
       float i = (((il>iu) ? il : iu)*0.1f)+0.9f;
       i = (i>=1.0f) ? 1.0f : i;
-      cb_hoja_rumble_enable(i);
+      // TO DO
+      //cb_hoja_rumble_enable(i);
     }
     else
     {
-      cb_hoja_rumble_enable(0);
+      // TO DO
+      //cb_hoja_rumble_enable(0);
     }
 }
 
-// Sends mac address with 0x81 command (unknown?)
-void info_set_mac()
-{
-  _switch_command_buffer[0] = 0x01;
-  _switch_command_buffer[1] = 0x00;
-  _switch_command_buffer[2] = 0x03;
-  memcpy(&_switch_command_buffer[3], &global_loaded_settings.switch_mac_address, 6*sizeof(uint8_t));
-}
-
-// A second part to the initialization,
-// no idea what this does but it's needed
-// to get continued comms over USB.
-void info_set_init()
-{
-  _switch_command_buffer[0] = 0x02;
-}
-
-void info_handler(uint8_t info_code)
-{
-  clear_report();
-  set_report_id(0x81);
-
-  switch(info_code)
-  {
-    case 0x01:
-      printf("MAC Address requested.");
-      info_set_mac();
-      break;
-
-    default:
-      printf("Unknown setup requested: %X", info_code);
-      _switch_command_buffer[0] = info_code;
-      break;
-  }
-
-  tud_hid_report(_switch_command_report_id, _switch_command_buffer, 64);
-}
-
-void pairing_set(uint8_t phase)
-{
-  // Respond with MAC address and "Pro Controller".
-  const uint8_t pro_controller_string[24] = {0x00, 0x25, 0x08, 0x50, 0x72, 0x6F, 0x20, 0x43, 0x6F,
-                                      0x6E, 0x74, 0x72, 0x6F, 0x6C, 0x6C, 0x65, 0x72, 0x00,
-                                      0x00, 0x00, 0x00, 0x00, 0x00, 0x68};
-  switch(phase)
-  {
-    default:
-    case 1:
-      set_ack(0x81);
-      _switch_command_buffer[14] = 1;
-      memcpy(&_switch_command_buffer[15], &global_loaded_settings.switch_mac_address, 6);
-      memcpy(&_switch_command_buffer[15+6], pro_controller_string, 24);
-      break;
-    case 2:
-      set_ack(0x81);
-      _switch_command_buffer[14] = 2;
-      memcpy(&_switch_command_buffer[15], _switch_ltk, 16);
-      break;
-    case 3:
-      set_ack(0x81);
-      _switch_command_buffer[14] = 3;
-      break;
-  }
-}
-
 // Handles a command, always 0x21 as a response ID
-void command_handler(uint8_t command, const uint8_t *data, uint16_t len)
+void ns_subcommand_handler(uint8_t subcommand, uint8_t *data, uint16_t len)
 {
+  uint16_t _report_len = 15;
+
   // Clear report
-  clear_report();
+  ns_report_clear(_switch_input_buffer, 64);
+  // Set Timer
+  ns_report_settimer(_switch_input_buffer);
+  // Set Battery
+  ns_report_setbattconn(_switch_input_buffer);
+
+  // Fill input portion
+  ns_report_setinputreport_full(_switch_input_buffer, &_switch_input_data);
 
   // Set report ID
-  set_report_id(0x21);
-
-  // Update timer
-  set_timer();
-
-  // Set connection/power info
-  set_battconn();
+  // not needed it's 0x21
 
   // Set subcmd
-  set_command(command);
+  ns_report_setsubcmd(_switch_input_buffer, subcommand);
+
   printf("CMD: ");
 
-  switch(command)
+  switch(subcommand)
   {
     case SW_CMD_SET_NFC:
       printf("Set NFC MCU:\n");
-      set_ack(0x80);
+      ns_report_setack(0x80);
       break;
 
     case SW_CMD_ENABLE_IMU:
       printf("Enable IMU: %d\n", data[11]);
-      imu_set_enabled(data[11]>0);
-      set_ack(0x80);
+      //imu_set_enabled(data[11]>0);
+      ns_report_setack(0x80);
       break;
 
     case SW_CMD_SET_PAIRING:
       printf("Set pairing.\n");
-      pairing_set(data[11]);
+      //pairing_set(data[11]);
       break;
 
     case SW_CMD_SET_INPUTMODE:
-      printf("Input mode change: %X\n", data[11]);
-      set_ack(0x80);
-      _switch_reporting_mode = data[11];
+      printf("Input mode change: %X\n", data[10]);
+      ns_report_setack(0x80);
+      ns_controller_setinputreportmode(data[10]);
       break;
 
     case SW_CMD_GET_DEVICEINFO:
       printf("Get device info.\n");
-      set_ack(0x82);
-      set_devinfo();
+      _report_len+=12;
+      ns_report_setack(0x82);
+      ns_report_sub_setdevinfo(_switch_input_buffer);
       break;
 
     case SW_CMD_SET_SHIPMODE:
       printf("Set ship mode: %X\n", data[11]);
-      set_ack(0x80);
+      ns_report_setack(0x80);
       break;
 
     case SW_CMD_GET_SPI:
-      printf("Read SPI. Address: %X, %X | Len: %d\n", data[12], data[11], data[15]);
-      set_ack(0x90);
-      sw_spi_readfromaddress(data[12], data[11], data[15]);
+      printf("Read SPI. Address: %X, %X | Len: %d\n", data[11], data[10], data[14]);
+      ns_report_setack(0x90);
+      sw_spi_readfromaddress(_switch_input_buffer, data[11], data[10], data[14]);
+      _report_len+=data[14];
       break;
 
     case SW_CMD_SET_SPI:
-      printf("Write SPI. Address: %X, %X | Len: %d\n", data[12], data[11], data[15]);
-      set_ack(0x80);
+      printf("Write SPI. Address: %X, %X | Len: %d\n", data[11], data[10], data[14]);
+      ns_report_setack(0x80);
 
       // Write IMU calibration data
-      if ((data[12] == 0x80) && (data[11] == 0x26))
+      if ((data[11] == 0x80) && (data[10] == 0x26))
       {
-        for(uint16_t i = 0; i < 26; i++)
-        {
-          global_loaded_settings.imu_calibration[i] = data[16+i];
-          printf("0x%x, ", data[16+i]);
-          printf("\n");
-        }
-        settings_save(false);
+        //for(uint16_t i = 0; i < 26; i++)
+        //{
+        //  global_loaded_settings.imu_calibration[i] = data[16+i];
+        //  printf("0x%x, ", data[16+i]);
+        //  printf("\n");
+        //}
+        //settings_save(false);
       }
 
       break;
 
     case SW_CMD_GET_TRIGGERET:
       printf("Get trigger ET.\n");
-      set_ack(0x83);
-      set_sub_triggertime(100);
+      ns_report_setack(0x83);
+      ns_report_sub_triggertime(_switch_input_buffer, 100);
+      _report_len += 14;
       break;
 
     case SW_CMD_ENABLE_VIBRATE:
       printf("Enable vibration.\n");
-      set_ack(0x80);
+      ns_report_setack(0x80);
       break;
 
     case SW_CMD_SET_PLAYER:
       printf("Set player: ");
-      set_ack(0x80);
+      ns_report_setack(0x80);
 
       uint8_t player = data[11] & 0xF;
 
@@ -346,43 +263,33 @@ void command_handler(uint8_t command, const uint8_t *data, uint16_t len)
       break;
 
     default:
-      printf("Unhandled: %X\n", command);
+      printf("Unhandled: %X\n", subcommand);
       for(uint16_t i = 0; i < len; i++)
       {
         printf("%X, ", data[i]);
       }
       printf("\n");
-      set_ack(0x80);
+      ns_report_setack(0x80);
       break;
   }
 
-  printf("Sent: ");
-  for(uint8_t i = 0; i < 32; i++)
-  {
-    printf("%X, ", _switch_command_buffer[i]);
-  }
-  printf("\n");
-
-  tud_hid_report(0x21, _switch_command_buffer, 64);
+  //tud_hid_report(0x21, _switch_input_buffer, 64);
+  esp_bt_hid_device_send_report(ESP_HIDD_REPORT_TYPE_INTRDATA, 0x21, _report_len, _switch_input_buffer);
 }
 
 // Handles an OUT report and responds accordingly.
-void report_handler(uint8_t report_id, const uint8_t *data, uint16_t len)
+void ns_report_handler(uint8_t report_id, uint8_t *data, uint16_t len)
 {
   switch(report_id)
   {
     // We have command data and possibly rumble
     case SW_OUT_ID_RUMBLE_CMD:
-      rumble_translate(&data[2]);
-      command_handler(data[10], data, len);
+      //switch_rumble_translate(&data[3]);
+      ns_subcommand_handler(data[9], data, len);
       break;
 
     case SW_OUT_ID_RUMBLE:
-      rumble_translate(&data[2]);
-      break;
-
-    case SW_OUT_ID_INFO:
-      info_handler(data[1]);
+      //switch_rumble_translate(&data[3]);
       break;
 
     default:
@@ -391,71 +298,72 @@ void report_handler(uint8_t report_id, const uint8_t *data, uint16_t len)
   }
 }
 
-uint8_t _unknown_thing()
+void imu_switch_buffer_out(sw_input_s *input_data, uint8_t *buffer)
 {
-  static uint8_t out = 0xA;
-  if (out == 0xA) out = 0xB;
-  else if (out == 0xB ) out = 0xC;
-  else out = 0xA;
-
-  return out;
-}
-
-#define DEBUG_IMU_VAL 8
-
-// PUBLIC FUNCTIONS
-void switch_commands_process(sw_input_s *input_data)
-{
-  if (_switch_in_command_got)
+  uint8_t idx = 0;
+  for(uint8_t i = 0; i<3; i++)
   {
-    report_handler(_switch_in_report_id, _switch_in_command_buffer, _switch_in_command_len);
-    _switch_in_command_got = false;
-  }
-  else
-  {
-    if (_switch_reporting_mode == 0x30)
-    {
-      clear_report();
-      set_report_id(0x30);
-      set_timer();
-      set_battconn();
+    buffer[0+idx] = input_data->ay & 0xFF;
+    buffer[1+idx] = (input_data->ay & 0xFF00) >> 8;
 
-      // END DEBUG
-      imu_switch_buffer_out(&_switch_command_buffer[12]);
+    buffer[2+idx] = input_data->ax & 0xFF;
+    buffer[3+idx] = (input_data->ax & 0xFF00) >> 8;
 
-      // Set input data
-      _switch_command_buffer[2] = input_data->right_buttons;
-      _switch_command_buffer[3] = input_data->shared_buttons;
-      _switch_command_buffer[4] = input_data->left_buttons;
+    buffer[4+idx] = input_data->az & 0xFF;
+    buffer[5+idx] = (input_data->az & 0xFF00) >> 8;
 
-      // Set sticks directly from hoja_analog_data
-      // Saves cycles :)
-      _switch_command_buffer[5]   = (input_data->ls_x & 0xFF);
-      _switch_command_buffer[6]   = (input_data->ls_x & 0xF00) >> 8;
-      //ns_input_report[7] |= (g_stick_data.lsy & 0xF) << 4;
-      _switch_command_buffer[7]   = (input_data->ls_y & 0xFF0) >> 4;
-      _switch_command_buffer[8]   = (input_data->rs_x & 0xFF);
-      _switch_command_buffer[9]   = (input_data->rs_x & 0xF00) >> 8;
-      _switch_command_buffer[10]  = (input_data->rs_y & 0xFF0) >> 4;
-      _switch_command_buffer[11]  = _unknown_thing();
+    buffer[6+idx] = input_data->gy & 0xFF;
+    buffer[7+idx] = (input_data->gy & 0xFF00) >> 8;
 
-      //printf("V: %d, %d\n", _switch_command_buffer[46], _switch_command_buffer[47]);
+    buffer[8+idx] = input_data->gx & 0xFF;
+    buffer[9+idx] = (input_data->gx & 0xFF00) >> 8;
 
-      tud_hid_report(_switch_command_report_id, _switch_command_buffer, 64);
-      analog_send_reset();
-    }
+    buffer[10+idx] = input_data->gz & 0xFF;
+    buffer[11+idx] = (input_data->gz & 0xFF00) >> 8;
+    idx+=12;
   }
 }
 
-void switch_commands_future_handle(uint8_t report_id, const uint8_t *data, uint16_t len)
+void ns_report_setinputreport_full(uint8_t *buffer, sw_input_s *input_data)
 {
-  _switch_in_command_got = true;
-  _switch_in_report_id = report_id;
-  _switch_in_command_len = len;
-  memcpy(_switch_in_command_buffer, data, len);
+
+    //imu_switch_buffer_out(input_data, &_switch_input_buffer[12]);
+
+    // Set input data
+    buffer[2] = input_data->right_buttons;
+    buffer[3] = input_data->shared_buttons;
+    buffer[4] = input_data->left_buttons;
+
+    // Set sticks directly
+    // Saves cycles :)
+    buffer[5]   = (input_data->ls_x & 0xFF);
+    buffer[6]   = (input_data->ls_x & 0xF00) >> 8;
+    //ns_input_report[7] |= (g_stick_data.lsy & 0xF) << 4;
+    buffer[7]   = (input_data->ls_y & 0xFF0) >> 4;
+    buffer[8]   = (input_data->rs_x & 0xFF);
+    buffer[9]   = (input_data->rs_x & 0xF00) >> 8;
+    buffer[10]  = (input_data->rs_y & 0xFF0) >> 4;
 }
 
-void switch_commands_bulkset(uint8_t start_idx, uint8_t* data, uint8_t len)
+// Sets the input report for short mode.
+void _ns_report_setinputreport_short(uint8_t *buffer)
 {
-  memcpy(&_switch_command_buffer[start_idx], data, len);
+    buffer[0] = 0x00;
+    buffer[1] = 0x00;
+    buffer[2] = 0x8; //ns_input_short.stick_hat;
+
+    // To-do: Sticks
+    buffer[3] = 0x00;
+    buffer[4] = 0x00;
+    buffer[5] = 0x00;
+    buffer[6] = 0x00;
+    buffer[7] = 0;
+    buffer[8] = 0;
+    buffer[9] = 0;
+    buffer[10] = 0;
+}
+
+void ns_report_bulkset(uint8_t *buffer, uint8_t start_idx, uint8_t* data, uint8_t len)
+{
+  memcpy(&buffer[start_idx], data, len);
 }
