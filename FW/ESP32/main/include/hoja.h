@@ -5,8 +5,14 @@
 
 typedef struct
 {
+    // Mac address of this device
     uint8_t device_mac[6];
+
+    // Mac address of the device we are connected to
     uint8_t switch_host_mac[6];
+
+    // Mac address of the device we are paired to
+    uint8_t paired_host_mac[6];
 } hoja_settings_s;
 
 extern hoja_settings_s global_loaded_settings;
@@ -20,6 +26,12 @@ typedef union
     };
     uint8_t bat_status;
   } switch_battery_status_u;
+
+  typedef struct
+{
+    uint8_t rumble_intensity; // 0-100 value representing rumble intensity
+    uint8_t connected_status; // Value representing if the BT is connected
+} i2cinput_status_s;
 
   typedef struct
 {
@@ -95,5 +107,9 @@ typedef union
     uint16_t gz;
 
 } __attribute__ ((packed)) sw_input_s;
+
+bool app_compare_mac(uint8_t *mac_1, uint8_t *mac_2);
+
+void app_save_host_mac();
 
 #endif

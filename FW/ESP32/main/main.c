@@ -21,11 +21,14 @@
 
 typedef void (*bluetooth_input_cb_t)(i2cinput_input_s *);
 
+i2cinput_status_s _bluetooth_status = {0};
+
 bluetooth_input_cb_t _bluetooth_input_cb = NULL;
 
-uint8_t _bluetooth_mac_address[6] = {0};
-
 hoja_settings_s global_loaded_settings = {0};
+
+bool     _msg_override = false;
+uint8_t  _msg_override_data[HOJA_I2C_MSG_SIZE]  = {0};
 
 bool _i2c_read_msg(uint8_t *buffer)
 {
@@ -86,6 +89,26 @@ bool _i2c_read_msg(uint8_t *buffer)
     }
 }
 
+void _i2c_write_status_msg()
+{
+    if(_msg_override)
+    {
+        ESP_LOGI("_i2c_write_status_msg", "Sending override message.");
+        //i2c_reset_tx_fifo(I2C_SLAVE_NUM);
+        i2c_slave_write_buffer(I2C_SLAVE_NUM, _msg_override_data, HOJA_I2C_MSG_SIZE, portMAX_DELAY);
+        _msg_override = false;
+    }
+    else 
+    {
+        uint8_t _msg_out[HOJA_I2C_MSG_SIZE] = {0};
+        _msg_out[0] = I2CINPUT_ID_STATUS;
+        _msg_out[1] = _bluetooth_status.rumble_intensity;
+        _msg_out[2] = _bluetooth_status.connected_status;
+        //i2c_reset_tx_fifo(I2C_SLAVE_NUM);
+        i2c_slave_write_buffer(I2C_SLAVE_NUM, _msg_out, HOJA_I2C_MSG_SIZE, portMAX_DELAY);
+    }
+}
+
 static esp_err_t i2c_slave_init(void)
 {
     int i2c_slave_port = I2C_SLAVE_NUM;
@@ -105,6 +128,38 @@ static esp_err_t i2c_slave_init(void)
         return err;
     }
     return i2c_driver_install(i2c_slave_port, conf_slave.mode, I2C_SLAVE_RX_BUF_LEN, I2C_SLAVE_TX_BUF_LEN, 0);
+}
+
+bool app_compare_mac(uint8_t *mac_1, uint8_t *mac_2)
+{
+    ESP_LOGI("app_compare_mac", "Mac 1:");
+    esp_log_buffer_hex("Switch HOST: ", mac_1, 6);
+    esp_log_buffer_hex("Saved HOST: ", mac_2, 6);
+    
+    for(uint8_t i = 0; i < 6; i++)
+    {
+        if (mac_1[i] != mac_2[i])
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+void app_save_host_mac()
+{
+    ESP_LOGI("app_save_host_mac", "Saving new host MAC.");
+
+    _msg_override_data[0] = I2CINPUT_ID_SAVEMAC;
+    _msg_override_data[1] = global_loaded_settings.switch_host_mac[0];
+    _msg_override_data[2] = global_loaded_settings.switch_host_mac[1];
+    _msg_override_data[3] = global_loaded_settings.switch_host_mac[2];
+    _msg_override_data[4] = global_loaded_settings.switch_host_mac[3];
+    _msg_override_data[5] = global_loaded_settings.switch_host_mac[4];
+    _msg_override_data[6] = global_loaded_settings.switch_host_mac[5];
+    _msg_override = true;
+
+    memcpy(global_loaded_settings.paired_host_mac, global_loaded_settings.switch_host_mac, 6);
 }
 
 void app_input(i2cinput_input_s *input)
@@ -130,7 +185,7 @@ void app_main(void)
 
     ESP_ERROR_CHECK(i2c_slave_init());
 
-    static uint8_t data[HOJA_I2C_MSG_SIZE] = {0xFF, 0xFF, 0xFF};
+    static uint8_t data[HOJA_I2C_MSG_SIZE]      = {0xFF, 0xFF, 0xFF};
     static i2cinput_input_s input = {0};
 
     for (;;)
@@ -141,6 +196,9 @@ void app_main(void)
 
         if (_i2c_read_msg(data))
         {
+            // First, write our response data
+            _i2c_write_status_msg();
+
             switch (data[0])
             {
                 default:
@@ -153,13 +211,24 @@ void app_main(void)
                 {
 
                     input_mode_t mode = data[1];
-                    global_loaded_settings.device_mac[0] = 0x7C;
-                    global_loaded_settings.device_mac[1] = 0xBB;
-                    global_loaded_settings.device_mac[2] = 0x8A;
+                    global_loaded_settings.device_mac[0] = data[2];
+                    global_loaded_settings.device_mac[1] = data[3];
+                    global_loaded_settings.device_mac[2] = data[4];
 
-                    global_loaded_settings.device_mac[3] = 0xEA;
-                    global_loaded_settings.device_mac[4] = 0x30;
-                    global_loaded_settings.device_mac[5] = 0x57;
+                    global_loaded_settings.device_mac[3] = data[5];
+                    global_loaded_settings.device_mac[4] = data[6];
+                    global_loaded_settings.device_mac[5] = data[7];
+
+                    // Load paired mac
+                    global_loaded_settings.paired_host_mac[0] = data[8];
+                    global_loaded_settings.paired_host_mac[1] = data[9];
+                    global_loaded_settings.paired_host_mac[2] = data[10];
+
+                    global_loaded_settings.paired_host_mac[3] = data[11];
+                    global_loaded_settings.paired_host_mac[4] = data[12];
+                    global_loaded_settings.paired_host_mac[5] = data[13];
+
+                    esp_log_buffer_hex(TAG, global_loaded_settings.paired_host_mac, 6);
 
                     switch (mode)
                     {

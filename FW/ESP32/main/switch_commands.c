@@ -239,6 +239,12 @@ void ns_subcommand_handler(uint8_t subcommand, uint8_t *data, uint16_t len)
       printf("Set player: ");
       ns_report_setack(0x80);
 
+      // We set pairing address here
+      if(!app_compare_mac(global_loaded_settings.switch_host_mac, global_loaded_settings.paired_host_mac))
+      {
+        app_save_host_mac();
+      }
+
       uint8_t player = data[11] & 0xF;
 
       switch(player)

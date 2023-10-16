@@ -156,7 +156,6 @@ void ns_controller_sleep_handle(ns_power_handle_t power_type)
     }
 }
 
-
 // SWITCH BTC GAP Event Callback
 void switch_bt_gap_cb(esp_bt_gap_cb_event_t event, esp_bt_gap_cb_param_t *param)
 {
@@ -182,6 +181,9 @@ void switch_bt_gap_cb(esp_bt_gap_cb_event_t event, esp_bt_gap_cb_param_t *param)
                 ESP_LOGI(TAG, "authentication success: %s", param->auth_cmpl.device_name);
                 esp_log_buffer_hex(TAG, param->auth_cmpl.bda, ESP_BD_ADDR_LEN);
                 ns_controller_input_task_set(NS_REPORT_MODE_BLANK);
+
+                // Set host bluetooth address
+                memcpy(&global_loaded_settings.switch_host_mac[0], &param->auth_cmpl.bda[0], ESP_BD_ADDR_LEN);
 
             } else {
                 ESP_LOGI(TAG, "authentication failed, status:%d", param->auth_cmpl.stat);
@@ -325,7 +327,6 @@ void switch_bt_hidd_cb(esp_hidd_cb_event_t event, esp_hidd_cb_param_t *param)
         }
 }
 
-
 // Switch HID report maps
 esp_hid_raw_report_map_t switch_report_maps[1] = {
     {
@@ -369,11 +370,8 @@ int core_bt_switch_start(void)
 
     for(uint8_t i = 0; i < 6; i++)
     {
-        if(global_loaded_settings.switch_host_mac[i] != 0) paired = true;
+        if(global_loaded_settings.paired_host_mac[i] > 0) paired = true;
     }
-
-    // DEBUG
-    paired = false;
 
     // If we are already paired, attempt connection
     if (paired)
@@ -383,7 +381,11 @@ int core_bt_switch_start(void)
         if (err == 1)
         {
             vTaskDelay(1500/portTICK_PERIOD_MS);
-            util_bluetooth_connect(global_loaded_settings.switch_host_mac);
+
+            // Set host bluetooth address
+            memcpy(&global_loaded_settings.switch_host_mac[0], &global_loaded_settings.paired_host_mac[0], ESP_BD_ADDR_LEN);
+
+            util_bluetooth_connect(global_loaded_settings.paired_host_mac);
         }
         
     }
@@ -501,6 +503,11 @@ void switch_bt_sendinput(i2cinput_input_s *input)
     _switch_input_data.b_home       = input->button_home;
     _switch_input_data.b_minus      = input->button_minus;
     _switch_input_data.b_plus       = input->button_plus;
+
+    _switch_input_data.t_l = input->trigger_l;
+    _switch_input_data.t_r = input->trigger_r;
+    _switch_input_data.t_zl = input->trigger_zl;
+    _switch_input_data.t_zr = input->trigger_zr;
 
     _switch_input_data.sb_left  = input->button_stick_left;
     _switch_input_data.sb_right = input->button_stick_right;
