@@ -1,6 +1,7 @@
 #include "core_bt_xinput.h"
 
 static bool _xinput_ready = false;
+TaskHandle_t _xinput_task_handler = NULL;
 
 bool xinput_bt_ready()
 {
@@ -271,13 +272,35 @@ uint8_t util_get_dpad_hat(uint8_t left_right, uint8_t up_down)
     return ret;
 }
 
+xi_input_s xi_input = {0};
+xi_input_s xi_input_last = {0};
+uint8_t xi_buffer[XI_HID_LEN];
+
+void _xinput_bt_input_task(void * params)
+{
+    const char *TAG = "_xinput_bt_input_task";
+    ESP_LOGI(TAG, "Starting XInput task loop.");
+    while(!xinput_bt_ready())
+    {
+        vTaskDelay(16/portTICK_PERIOD_MS);
+    }
+
+    for(;;)
+    {
+        if(xinput_compare(&xi_input, &xi_input_last))
+        {
+            memcpy(xi_buffer, &xi_input, XI_HID_LEN);
+            esp_hidd_dev_input_set(xinput_app_params.hid_dev, 0, XI_INPUT_REPORT_ID, xi_buffer, XI_HID_LEN);
+            memcpy(&xi_input_last, &xi_input, sizeof(xi_input_s));
+        }
+        
+        vTaskDelay(8/portTICK_PERIOD_MS);
+    }
+}
+
 void xinput_bt_sendinput(i2cinput_input_s *input)
 {
     const char *TAG = "xinput_bt_sendinput";
-
-    static xi_input_s xi_input = {0};
-    static xi_input_s xi_input_last = {0};
-    static uint8_t xi_buffer[XI_HID_LEN];
 
     xi_input.stick_left_x   = input->lx << 4;
     xi_input.stick_left_y   = input->ly << 4;
@@ -302,13 +325,6 @@ void xinput_bt_sendinput(i2cinput_input_s *input)
     uint8_t ud = (1 - input->dpad_down) + input->dpad_up;
 
     xi_input.dpad_hat = util_get_dpad_hat(lr, ud);
-
-    if (xinput_compare(&xi_input, &xi_input_last) && _xinput_ready)
-    {
-        memcpy(xi_buffer, &xi_input, XI_HID_LEN);
-        esp_hidd_dev_input_set(xinput_app_params.hid_dev, 0, XI_INPUT_REPORT_ID, xi_buffer, XI_HID_LEN);
-        memcpy(&xi_input_last, &xi_input, sizeof(xi_input_s));
-    }
 }
 
 esp_hid_device_config_t xinput_hidd_config = {
@@ -333,6 +349,10 @@ int core_bt_xinput_start(void)
 
     err = util_bluetooth_init(debug_address);
     err = util_bluetooth_register_app(&xinput_app_params, &xinput_hidd_config, true);
+
+    xTaskCreatePinnedToCore(_xinput_bt_input_task, 
+                                "XInput Send Task", 2048,
+                                NULL, 0, &_xinput_task_handler, 0);
     return err;
 }
 

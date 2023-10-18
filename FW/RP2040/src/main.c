@@ -17,6 +17,40 @@ void _gpio_put_od(uint gpio, bool level)
     }
 }
 
+void cb_hoja_set_uart_enabled(bool enable)
+{
+    if(enable)
+    {
+        gpio_put(PGPIO_BUTTON_USB_EN, 1);
+        sleep_ms(100);
+        gpio_put(PGPIO_BUTTON_USB_SEL, 1);
+        sleep_ms(100);
+        gpio_put(PGPIO_BUTTON_USB_EN, 0);
+    }
+    else
+    {
+        gpio_put(PGPIO_BUTTON_USB_EN, 1);
+        sleep_ms(100);
+        gpio_put(PGPIO_BUTTON_USB_SEL, 0);
+        sleep_ms(100);
+        gpio_put(PGPIO_BUTTON_USB_EN, 0);
+    }
+}
+
+void cb_hoja_set_bluetooth_enabled(bool enable)
+{
+    if(enable)
+    {
+        // Release ESP to be controlled externally
+        _gpio_put_od(PGPIO_ESP_EN, true);
+        sleep_ms(1000);
+    }
+    else
+    {
+        _gpio_put_od(PGPIO_ESP_EN, false);
+    }
+}
+
 button_remap_s user_map = {
     .dpad_up = MAPCODE_DUP,
     .dpad_down = MAPCODE_DDOWN,
@@ -84,6 +118,7 @@ void cb_hoja_read_buttons(button_data_s *data)
     gpio_put(PGPIO_SCAN_C, true);
 
     data->button_minus      = !gpio_get(PGPIO_BUTTON_PWRSELECT);
+    data->button_shipping   = data->button_minus;
 }
 
 void cb_hoja_read_analog(a_data_s *data)
@@ -110,7 +145,7 @@ int main()
     cb_hoja_hardware_setup();
 
     gpio_init(PGPIO_ESP_EN);
-    _gpio_put_od(PGPIO_ESP_EN, false);
+    cb_hoja_set_bluetooth_enabled(false);
 
     gpio_init(PGPIO_BUTTON_USB_EN);
     gpio_set_dir(PGPIO_BUTTON_USB_EN, GPIO_OUT);
@@ -123,42 +158,20 @@ int main()
     button_data_s tmp = {0};
     cb_hoja_read_buttons(&tmp);
 
-    if(tmp.trigger_l)
+    if(tmp.button_b)
     {
         reset_usb_boot(0, 0);
     }
-    else if (tmp.trigger_r)
+    else if (tmp.button_a)
     {
         // Release ESP to be controlled externally
-        _gpio_put_od(PGPIO_ESP_EN, true);
-
-        sleep_ms(100);
-        gpio_put(PGPIO_BUTTON_USB_SEL, 1);
-        sleep_ms(100);
-
-        gpio_put(PGPIO_BUTTON_USB_EN, 1);
-        sleep_ms(100);
-        gpio_put(PGPIO_BUTTON_USB_EN, 0);
+        cb_hoja_set_bluetooth_enabled(true);
+        cb_hoja_set_uart_enabled(true);
     }
-    else
-    {
 
-        hoja_config_t _config = {
-            .input_method   = INPUT_METHOD_BLUETOOTH,
-            .input_mode     = INPUT_MODE_SWPRO,
-        };
-
-        // Release ESP to be enabled
-        _gpio_put_od(PGPIO_ESP_EN, true);
-        sleep_ms(100);
-        gpio_put(PGPIO_BUTTON_USB_SEL, 1);
-        sleep_ms(100);
-
-        gpio_put(PGPIO_BUTTON_USB_EN, 1);
-        sleep_ms(100);
-        gpio_put(PGPIO_BUTTON_USB_EN, 0);
-
-        sleep_ms(5000);
-        hoja_init(&_config);
-    }
+    hoja_config_t _config = {
+        .input_method   = INPUT_METHOD_AUTO,
+        .input_mode     = INPUT_MODE_LOAD,
+    };
+    hoja_init(&_config);
 }

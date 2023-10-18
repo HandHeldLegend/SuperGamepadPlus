@@ -10,7 +10,8 @@
 #define I2C_NUMBER(num) _I2C_NUMBER(num)
 
 #define DATA_LENGTH 64 /*!< Data buffer length of test buffer */
-#define HOJA_I2C_MSG_SIZE 32
+#define HOJA_I2C_MSG_SIZE_IN 32
+#define HOJA_I2C_MSG_SIZE_OUT 8
 
 #define I2C_SLAVE_SCL_IO 20                    /*!< gpio number for i2c slave clock */
 #define I2C_SLAVE_SDA_IO 19                    /*!< gpio number for i2c slave data */
@@ -28,7 +29,7 @@ bluetooth_input_cb_t _bluetooth_input_cb = NULL;
 hoja_settings_s global_loaded_settings = {0};
 
 bool     _msg_override = false;
-uint8_t  _msg_override_data[HOJA_I2C_MSG_SIZE]  = {0};
+uint8_t  _msg_override_data[HOJA_I2C_MSG_SIZE_OUT]  = {0};
 
 bool _i2c_read_msg(uint8_t *buffer)
 {
@@ -37,7 +38,7 @@ bool _i2c_read_msg(uint8_t *buffer)
     static bool e = false;
     static bool f = false;
 
-    while(idx<HOJA_I2C_MSG_SIZE)
+    while(idx<HOJA_I2C_MSG_SIZE_IN)
     {
         i2c_slave_read_buffer(I2C_SLAVE_NUM, &buffer[idx], 1, portMAX_DELAY);
         switch(buffer[idx])
@@ -54,15 +55,15 @@ bool _i2c_read_msg(uint8_t *buffer)
             break;
 
             case 0xFF:
-            if(idx==(HOJA_I2C_MSG_SIZE-1))
+            if(idx==(HOJA_I2C_MSG_SIZE_IN-1))
             {
                 f=true;
-                idx=HOJA_I2C_MSG_SIZE;
+                idx=HOJA_I2C_MSG_SIZE_IN;
             }
             else
             {
                 f=false;
-                idx=HOJA_I2C_MSG_SIZE;
+                idx=HOJA_I2C_MSG_SIZE_IN;
             }
             break;
         }
@@ -95,17 +96,17 @@ void _i2c_write_status_msg()
     {
         ESP_LOGI("_i2c_write_status_msg", "Sending override message.");
         //i2c_reset_tx_fifo(I2C_SLAVE_NUM);
-        i2c_slave_write_buffer(I2C_SLAVE_NUM, _msg_override_data, HOJA_I2C_MSG_SIZE, portMAX_DELAY);
+        i2c_slave_write_buffer(I2C_SLAVE_NUM, _msg_override_data, HOJA_I2C_MSG_SIZE_OUT, portMAX_DELAY);
         _msg_override = false;
     }
     else 
     {
-        uint8_t _msg_out[HOJA_I2C_MSG_SIZE] = {0};
+        uint8_t _msg_out[HOJA_I2C_MSG_SIZE_OUT] = {0};
         _msg_out[0] = I2CINPUT_ID_STATUS;
         _msg_out[1] = _bluetooth_status.rumble_intensity;
         _msg_out[2] = _bluetooth_status.connected_status;
         //i2c_reset_tx_fifo(I2C_SLAVE_NUM);
-        i2c_slave_write_buffer(I2C_SLAVE_NUM, _msg_out, HOJA_I2C_MSG_SIZE, portMAX_DELAY);
+        i2c_slave_write_buffer(I2C_SLAVE_NUM, _msg_out, HOJA_I2C_MSG_SIZE_OUT, portMAX_DELAY);
     }
 }
 
@@ -185,7 +186,7 @@ void app_main(void)
 
     ESP_ERROR_CHECK(i2c_slave_init());
 
-    static uint8_t data[HOJA_I2C_MSG_SIZE]      = {0xFF, 0xFF, 0xFF};
+    static uint8_t data[HOJA_I2C_MSG_SIZE_IN]      = {0xFF, 0xFF, 0xFF};
     static i2cinput_input_s input = {0};
 
     for (;;)
@@ -203,7 +204,7 @@ void app_main(void)
             {
                 default:
                     ESP_LOGI(TAG, "WRONG CODE");
-                    memset(data, 0, HOJA_I2C_MSG_SIZE);
+                    memset(data, 0, HOJA_I2C_MSG_SIZE_IN);
                     break;
 
                 // Initialize bluetooth
@@ -238,14 +239,14 @@ void app_main(void)
                         case INPUT_MODE_SWPRO:
                             _bluetooth_input_cb = switch_bt_sendinput;
                             ESP_LOGI(TAG, "Switch BT Mode Init...");
-                            memset(data, 0, HOJA_I2C_MSG_SIZE);
+                            memset(data, 0, HOJA_I2C_MSG_SIZE_IN);
                             core_bt_switch_start();
                             break;
 
                         case INPUT_MODE_XINPUT:
                             _bluetooth_input_cb = xinput_bt_sendinput;
                             ESP_LOGI(TAG, "XInput BT Mode Init...");
-                            memset(data, 0, HOJA_I2C_MSG_SIZE);
+                            memset(data, 0, HOJA_I2C_MSG_SIZE_IN);
                             core_bt_xinput_start();
                             break;
                     }
@@ -256,7 +257,7 @@ void app_main(void)
                 {
                     memcpy(&input, &data[1], 27);
                     app_input(&input);
-                    memset(data, 0, HOJA_I2C_MSG_SIZE);
+                    memset(data, 0, HOJA_I2C_MSG_SIZE_IN);
                 }
                 break;
             }

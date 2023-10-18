@@ -6,5 +6,7 @@
         "main.h": "c",
         "btinput.h": "c",
         "switch_analog.h": "c"
-    }
+    },
+    "idf.portWin": "COM6",
+    "idf.flashType": "UART"
 }
