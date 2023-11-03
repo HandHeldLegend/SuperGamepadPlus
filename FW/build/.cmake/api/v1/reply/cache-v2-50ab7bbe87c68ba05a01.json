@@ -195,7 +195,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/build"
+			"value" : "c:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -279,10 +279,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "CXX compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/gcc-arm-none-eabi/bin/arm-none-eabi-g++.exe"
 		},
 		{
@@ -407,10 +407,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe"
 		},
 		{
@@ -679,7 +679,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -739,7 +739,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040"
+			"value" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1463,7 +1463,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : " C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs"
+			"value" : " C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs"
 		},
 		{
 			"name" : "PICO_DOXYGEN_PATHS",
@@ -1667,7 +1667,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/build"
+			"value" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/build"
 		},
 		{
 			"name" : "SUPERGAMEPAD_RP2040_IS_TOP_LEVEL",
@@ -1691,7 +1691,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040"
+			"value" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW"
 		},
 		{
 			"name" : "_Python3_Compiler_REASON_FAILURE",
@@ -1754,18 +1754,6 @@
 			"value" : "6a19dfa1166553571bb185b373903d4b"
 		},
 		{
-			"name" : "_Python3_Interpreter_REASON_FAILURE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Interpreter reason failure"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : ""
-		},
-		{
 			"name" : "_Python3_NumPy_REASON_FAILURE",
 			"properties" : 
 			[
@@ -1799,7 +1787,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/build/pico-sdk"
+			"value" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/build/pico-sdk"
 		},
 		{
 			"name" : "pico_sdk_IS_TOP_LEVEL",

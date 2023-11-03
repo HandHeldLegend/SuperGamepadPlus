@@ -83,7 +83,7 @@
 			{
 				"command" : 4,
 				"file" : 3,
-				"line" : 59,
+				"line" : 60,
 				"parent" : 7
 			},
 			{
@@ -95,7 +95,7 @@
 			{
 				"command" : 4,
 				"file" : 3,
-				"line" : 60,
+				"line" : 59,
 				"parent" : 7
 			},
 			{
@@ -353,35 +353,35 @@
 			[
 				{
 					"backtrace" : 17,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/include"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/devices"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/devices"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/generated"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/generated"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/input"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/input"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/switch"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/switch"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/usb"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/usb"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/utilities"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/utilities"
 				},
 				{
 					"backtrace" : 2,
@@ -397,7 +397,7 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/build/generated/pico_base"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/build/generated/pico_base"
 				},
 				{
 					"backtrace" : 2,
@@ -915,35 +915,35 @@
 			[
 				{
 					"backtrace" : 17,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/include"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/devices"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/devices"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/generated"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/generated"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/input"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/input"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/switch"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/switch"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/usb"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/usb"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/utilities"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/utilities"
 				},
 				{
 					"backtrace" : 2,
@@ -959,7 +959,7 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/build/generated/pico_base"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/build/generated/pico_base"
 				},
 				{
 					"backtrace" : 2,
@@ -1407,35 +1407,35 @@
 			[
 				{
 					"backtrace" : 17,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/include"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/devices"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/devices"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/generated"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/generated"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/input"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/input"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/switch"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/switch"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/usb"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/usb"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/lib/HOJA-LIB-RP2040/include/utilities"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/lib/HOJA-LIB-RP2040/include/utilities"
 				},
 				{
 					"backtrace" : 2,
@@ -1451,7 +1451,7 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/build/generated/pico_base"
+					"path" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/build/generated/pico_base"
 				},
 				{
 					"backtrace" : 2,
@@ -1673,11 +1673,11 @@
 		},
 		{
 			"backtrace" : 11,
-			"id" : "hoja_lib_nserial_pio_h::@16e020e79a31ade7a0ad"
+			"id" : "hoja_lib_joybus_pio_h::@16e020e79a31ade7a0ad"
 		},
 		{
 			"backtrace" : 13,
-			"id" : "hoja_lib_joybus_pio_h::@16e020e79a31ade7a0ad"
+			"id" : "hoja_lib_nserial_pio_h::@16e020e79a31ade7a0ad"
 		}
 	],
 	"id" : "SUPERGAMEPAD_RP2040::@6890427a1f51a3e7e1df",

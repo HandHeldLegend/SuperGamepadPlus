@@ -1160,14 +1160,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "SUPERGAMEPAD_RP2040::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SUPERGAMEPAD_RP2040-Debug-f580610e4ea374ab1641.json",
+					"jsonFile" : "target-SUPERGAMEPAD_RP2040-Debug-619d7a86262c1c8bff14.json",
 					"name" : "SUPERGAMEPAD_RP2040",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 43,
 					"id" : "bs2_default::@bc554eaed616d198a22d",
-					"jsonFile" : "target-bs2_default-Debug-8348138c9845ea0df6c3.json",
+					"jsonFile" : "target-bs2_default-Debug-c60c4d65e800c7fc3adc.json",
 					"name" : "bs2_default",
 					"projectIndex" : 1
 				},
@@ -1233,8 +1233,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040/build",
-		"source" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/RP2040"
+		"build" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW/build",
+		"source" : "C:/Users/Mitch/GitRepos/SuperGamepadPlus/FW"
 	},
 	"version" : 
 	{
