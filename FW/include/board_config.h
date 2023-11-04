@@ -3,8 +3,7 @@
 
 // Device stuff
 #define HOJA_DEVICE_ID  0xB001
-#define HOJA_FW_VERSION 0x0A00
-#define HOJA_SETTINGS_VERSION 0xA000
+#define HOJA_FW_VERSION 0x0A01
 
 // RGB Stuff
 #define HOJA_RGB_PIN 15
@@ -24,7 +23,7 @@
 #define HOJA_ANALOG_LIGHT 50
 
 // URL that will display to open a config tool
-#define HOJA_WEBUSB_URL     "retroplayground.com"
+#define HOJA_WEBUSB_URL     "handheldlegend.github.io/hoja_config"
 #define HOJA_MANUFACTURER   "RetroPlayground"
 #define HOJA_PRODUCT        "SuperGamepad+"
 
