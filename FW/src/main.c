@@ -41,9 +41,9 @@ void cb_hoja_set_bluetooth_enabled(bool enable)
 {
     if(enable)
     {
+        cb_hoja_set_uart_enabled(true);
         // Release ESP to be controlled externally
         _gpio_put_od(PGPIO_ESP_EN, true);
-        sleep_ms(1000);
     }
     else
     {
@@ -119,6 +119,7 @@ void cb_hoja_read_buttons(button_data_s *data)
 
     data->button_minus      = !gpio_get(PGPIO_BUTTON_PWRSELECT);
     data->button_shipping   = data->button_minus;
+    data->button_sync       = data->button_plus;
 }
 
 void cb_hoja_read_analog(a_data_s *data)
@@ -158,20 +159,35 @@ int main()
     button_data_s tmp = {0};
     cb_hoja_read_buttons(&tmp);
 
-    if(tmp.button_b)
-    {
-        reset_usb_boot(0, 0);
-    }
-    else if (tmp.button_a)
-    {
-        // Release ESP to be controlled externally
-        cb_hoja_set_bluetooth_enabled(true);
-        cb_hoja_set_uart_enabled(true);
-    }
-
     hoja_config_t _config = {
         .input_method   = INPUT_METHOD_AUTO,
         .input_mode     = INPUT_MODE_LOAD,
     };
+
+    if(tmp.button_plus && !tmp.trigger_r)
+    {
+        reset_usb_boot(0, 0);
+    }
+    else if (tmp.button_plus && tmp.trigger_r)
+    {
+        _config.input_method = INPUT_METHOD_BLUETOOTH;
+        // Release ESP to be controlled externally
+        cb_hoja_set_bluetooth_enabled(true);
+        cb_hoja_set_uart_enabled(true);
+
+        sleep_ms(3500);
+
+        for(;;)
+        {
+            cb_hoja_read_buttons(&tmp);
+            if(tmp.trigger_l)
+            {
+                watchdog_reboot(0, 0, 0);
+            }
+
+            sleep_ms(150);
+        }
+    }
+    
     hoja_init(&_config);
 }
