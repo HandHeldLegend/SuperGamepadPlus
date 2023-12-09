@@ -117,9 +117,28 @@ void cb_hoja_read_buttons(button_data_s *data)
     //
     gpio_put(PGPIO_SCAN_C, true);
 
-    data->button_minus      = !gpio_get(PGPIO_BUTTON_PWRSELECT);
-    data->button_shipping   = data->button_minus;
+    data->button_minus =!gpio_get(PGPIO_BUTTON_PWRSELECT);
+    data->button_shipping = data->button_minus;
+
+    if(data->button_minus && data->trigger_r)
+    {
+        data->button_minus = false;
+        data->trigger_r = false;
+        data->button_home = true;
+    }
+    else data->button_home = false;
+
+    if(data->button_minus && data->trigger_l)
+    {
+        data->button_minus = false;
+        data->trigger_l = false;
+        data->button_capture = true;
+    }
+    else data->button_capture = false;
+    
+
     data->button_sync       = data->button_plus;
+
 }
 
 void cb_hoja_read_analog(a_data_s *data)
