@@ -136,7 +136,6 @@ void cb_hoja_read_buttons(button_data_s *data)
     }
     else data->button_capture = false;
     
-
     data->button_sync       = data->button_plus;
 
 }
@@ -183,7 +182,7 @@ int main()
         .input_mode     = INPUT_MODE_LOAD,
     };
 
-    if(tmp.button_plus && !tmp.trigger_r)
+    if(tmp.button_plus && tmp.trigger_l)
     {
         reset_usb_boot(0, 0);
     }
