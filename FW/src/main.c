@@ -1,4 +1,3 @@
-#include "hoja_includes.h"
 #include "main.h"
 
 void _gpio_put_od(uint gpio, bool level)

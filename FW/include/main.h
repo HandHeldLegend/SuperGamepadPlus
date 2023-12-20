@@ -1,3 +1,5 @@
+#include "hoja_includes.h"
+
 #define PGPIO_BUTTON_PWRSELECT 14
 
 #define PGPIO_BUTTON_USB_SEL 5
@@ -13,6 +15,8 @@
 #define PGPIO_PUSH_B    18
 #define PGPIO_PUSH_C    21
 #define PGPIO_PUSH_D    22
+
+void _gpio_put_od(uint gpio, bool level);
 
 // Analog L Trigger ADC
 //#define PADC_LT 1
