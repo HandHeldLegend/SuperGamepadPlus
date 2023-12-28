@@ -1,0 +1,4 @@
+Partlist exported from Team Hub: Hand Held Legend   Project: SNES  Board: SNES_Trigger_Tactile_PCB v16 at 12/22/2023 1:10 PM
+
+Qty Value             Device            Package Parts Description CATEGORY  DESCRIPTION MANUFACTURER MPN OPERATING_TEMP PART_STATUS ROHS_COMPLIANT SERIES SUB-CATEGORY THERMALLOSS TYPE
+1   GT-TC089C-H075-L1 GT-TC089C-H075-L1 6MM_SW  SW1                                                                                                                                                      

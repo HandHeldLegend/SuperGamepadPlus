@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2023-12-22T21:10:58Z",
+        "GenerationSoftware": {
+            "Application": "Fusion 360 Electronics",
+            "Vendor": "Autodesk",
+            "Version": "9.7.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "SNES_Trigger_Tactile_PCB v16"
+        },
+        "Owner": "Kyle Capel <kyle@handheldlegend.com>",
+        "Size": {
+            "X": 21.699541,
+            "Y": 15.1
+        }
+    }
+}
