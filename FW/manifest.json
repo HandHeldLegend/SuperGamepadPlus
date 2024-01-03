@@ -1,4 +1,4 @@
 {
-    "changelog": "Fixes HW Test.",
-    "fw_version": 2564
+    "changelog": "Add USB->Bluetooth Reboot and more.",
+    "fw_version": 2565
 }

@@ -142,10 +142,10 @@ void cb_hoja_read_buttons(button_data_s *data)
 void cb_hoja_read_analog(a_data_s *data)
 {
     // Convert data
-    data->lx = 128<<4;
-    data->ly = 128<<4;
-    data->rx = 128<<4;
-    data->ry = 128<<4;
+    data->lx = 2048;
+    data->ly = 2048;
+    data->rx = 2048;
+    data->ry = 2048;
 }
 
 void cb_hoja_task_1_hook(uint32_t timestamp)
@@ -199,7 +199,7 @@ int main()
             cb_hoja_read_buttons(&tmp);
             if(tmp.trigger_l)
             {
-                watchdog_reboot(0, 0, 0);
+                hoja_shutdown_instant();
             }
 
             sleep_ms(150);
