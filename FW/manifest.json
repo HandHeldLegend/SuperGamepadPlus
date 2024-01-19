@@ -1,4 +1,4 @@
 {
-    "changelog": "Add USB->Bluetooth Reboot and more.",
-    "fw_version": 2565
+    "changelog": "Add shutdown for Wired modes when unplugged",
+    "fw_version": 2566
 }

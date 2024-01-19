@@ -118,6 +118,7 @@ uint16_t cb_hoja_hardware_test()
     _t.latch_pin = _hwtest_latch();
     _t.rgb_pin = _hwtest_rgb();
     _t.imu = false;
+    _t.rumble = false;
 
     return _t.val;
 }

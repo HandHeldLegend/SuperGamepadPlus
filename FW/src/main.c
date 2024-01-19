@@ -40,7 +40,7 @@ void cb_hoja_set_bluetooth_enabled(bool enable)
 {
     if(enable)
     {
-        cb_hoja_set_uart_enabled(true);
+        //cb_hoja_set_uart_enabled(true);
         // Release ESP to be controlled externally
         _gpio_put_od(PGPIO_ESP_EN, true);
     }
