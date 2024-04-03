@@ -5,7 +5,7 @@
 
 // Device stuff
 #define HOJA_DEVICE_ID  0xB001
-#define HOJA_FW_VERSION 0x0A08
+#define HOJA_FW_VERSION 0x0A0A
 
 // RGB Stuff
 #define HOJA_RGB_PIN 15
@@ -42,7 +42,8 @@
 #define HOJA_CAPABILITY_NINTENDO_SERIAL 1
 #define HOJA_CAPABILITY_NINTENDO_JOYBUS 1
 
-#define HOJA_CAPABILITY_RUMBLE 0
+#define HOJA_CAPABILITY_RUMBLE_ERM 0
+#define HOJA_CAPABILITY_RUMBLE_LRA 0
 
 // -1 indicates that the RGB group is unused.
 #define HOJA_RGB_GROUP_RS       {-1}
