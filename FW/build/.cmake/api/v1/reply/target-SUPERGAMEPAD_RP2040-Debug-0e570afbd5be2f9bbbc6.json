@@ -71,7 +71,7 @@
 			{
 				"command" : 4,
 				"file" : 3,
-				"line" : 61,
+				"line" : 64,
 				"parent" : 7
 			},
 			{
@@ -642,7 +642,7 @@
 				36,
 				37,
 				38,
-				40,
+				39,
 				41,
 				42,
 				43,
@@ -658,15 +658,15 @@
 				53,
 				54,
 				55,
-				57,
+				56,
 				58,
-				60,
-				63,
+				59,
+				61,
 				64,
-				68,
+				65,
 				69,
-				71,
-				75,
+				70,
+				72,
 				76,
 				77,
 				78,
@@ -698,7 +698,8 @@
 				104,
 				105,
 				106,
-				107
+				107,
+				108
 			]
 		},
 		{
@@ -1161,17 +1162,17 @@
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				39,
-				56,
-				59,
-				61,
+				40,
+				57,
+				60,
 				62,
-				65,
+				63,
 				66,
 				67,
-				70,
-				72,
-				73
+				68,
+				71,
+				73,
+				74
 			]
 		},
 		{
@@ -1661,7 +1662,7 @@
 			},
 			"sourceIndexes" : 
 			[
-				74
+				75
 			]
 		}
 	],
@@ -1673,15 +1674,15 @@
 		},
 		{
 			"backtrace" : 9,
-			"id" : "hoja_lib_ws2812_pio_h::@16e020e79a31ade7a0ad"
-		},
-		{
-			"backtrace" : 11,
 			"id" : "hoja_lib_joybus_pio_h::@16e020e79a31ade7a0ad"
 		},
 		{
-			"backtrace" : 13,
+			"backtrace" : 11,
 			"id" : "hoja_lib_nserial_pio_h::@16e020e79a31ade7a0ad"
+		},
+		{
+			"backtrace" : 13,
+			"id" : "hoja_lib_ws2812_pio_h::@16e020e79a31ade7a0ad"
 		}
 	],
 	"id" : "SUPERGAMEPAD_RP2040::@6890427a1f51a3e7e1df",
@@ -2572,7 +2573,7 @@
 				36,
 				37,
 				38,
-				40,
+				39,
 				41,
 				42,
 				43,
@@ -2588,15 +2589,15 @@
 				53,
 				54,
 				55,
-				57,
+				56,
 				58,
-				60,
-				63,
+				59,
+				61,
 				64,
-				68,
+				65,
 				69,
-				71,
-				74,
+				70,
+				72,
 				75,
 				76,
 				77,
@@ -2629,24 +2630,25 @@
 				104,
 				105,
 				106,
-				107
+				107,
+				108
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				39,
-				56,
-				59,
-				61,
+				40,
+				57,
+				60,
 				62,
-				65,
+				63,
 				66,
 				67,
-				70,
-				72,
-				73
+				68,
+				71,
+				73,
+				74
 			]
 		}
 	],
@@ -2782,6 +2784,12 @@
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
 			"path" : "lib/HOJA-LIB-RP2040/src/input/analog.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "lib/HOJA-LIB-RP2040/src/input/triggers.c",
 			"sourceGroupIndex" : 0
 		},
 		{

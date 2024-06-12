@@ -17,6 +17,28 @@ void _gpio_put_od(uint gpio, bool level)
     }
 }
 
+void cb_hoja_baseband_update_loop(button_data_s *buttons)
+{
+    if(buttons->trigger_l)
+    {
+        watchdog_reboot(0, 0, 0);
+    }
+
+    static bool enstate;
+
+    if(buttons->button_plus && !enstate)
+    {
+        enstate = true;
+        _gpio_put_od(PGPIO_ESP_EN, false);
+    }
+    else if(!buttons->button_plus && enstate)
+    {
+        _gpio_put_od(PGPIO_ESP_EN, true);
+        enstate = false;
+    }
+    sleep_ms(10);
+}
+
 void cb_hoja_set_uart_enabled(bool enable)
 {
     if(enable)
@@ -188,23 +210,8 @@ int main()
     }
     else if (tmp.button_plus && tmp.trigger_r)
     {
-        _config.input_method = INPUT_METHOD_BLUETOOTH;
-        // Release ESP to be controlled externally
-        cb_hoja_set_bluetooth_enabled(true);
-        cb_hoja_set_uart_enabled(true);
-
-        sleep_ms(3500);
-
-        for(;;)
-        {
-            cb_hoja_read_buttons(&tmp);
-            if(tmp.trigger_l)
-            {
-                hoja_shutdown_instant();
-            }
-
-            sleep_ms(150);
-        }
+        _config.input_method    = INPUT_METHOD_BLUETOOTH;
+        _config.input_mode      = INPUT_MODE_BASEBANDUPDATE;
     }
     
     hoja_init(&_config);
