@@ -1,5 +1,45 @@
 #include "main.h"
 
+#define BATTERY_ADC 0
+#define BATTERY_GPIO 0
+uint8_t cb_hoja_get_battery_level()
+{
+
+    const float ADC_MAX_VALUE = 4095.0;
+    const float LOGIC_LEVEL_MAX = 3.3;
+    const float BATTERY_VOLTAGE_FULL = 4.1;
+    const float BATTERY_VOLTAGE_EMPTY = 3.7;
+
+    adc_init();
+    adc_gpio_init(BATTERY_GPIO);
+    adc_select_input(BATTERY_ADC);
+
+    float reading = (float) adc_read();
+    // Calculate the voltage at the ADC input (after the voltage divider)
+    float v_adc = (reading / ADC_MAX_VALUE) * LOGIC_LEVEL_MAX;
+
+    // Calculate the actual battery voltage
+    float v_battery = v_adc * 2;
+
+    // Calculate the battery percentage
+    float battery_percentage = ((v_battery - BATTERY_VOLTAGE_EMPTY) / 
+                                (BATTERY_VOLTAGE_FULL - BATTERY_VOLTAGE_EMPTY)) * 100;
+
+    // Clamp the battery percentage to the range 0-100
+    if (battery_percentage > 100) {
+        battery_percentage = 100;
+    } else if (battery_percentage < 0) {
+        battery_percentage = 0;
+    }
+
+    return (uint8_t)battery_percentage;
+}
+
+void update_battery_level()
+{
+    
+}
+
 void _gpio_put_od(uint gpio, bool level)
 {
     if(level)

@@ -5,7 +5,8 @@
         "hoja_comms.h": "c",
         "main.h": "c",
         "btinput.h": "c",
-        "switch_analog.h": "c"
+        "switch_analog.h": "c",
+        "battery.h": "c"
     },
     "idf.portWin": "COM6",
     "idf.flashType": "UART"
