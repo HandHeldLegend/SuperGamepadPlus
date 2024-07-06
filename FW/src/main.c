@@ -182,21 +182,24 @@ void cb_hoja_read_buttons(button_data_s *data)
     data->button_minus =!gpio_get(PGPIO_BUTTON_PWRSELECT);
     data->button_shipping = data->button_minus;
 
-    if(data->button_minus && data->trigger_r)
+    if(hoja_comms_current_mode() != INPUT_MODE_SNES)
     {
-        data->button_minus = false;
-        data->trigger_r = false;
-        data->button_home = true;
-    }
-    else data->button_home = false;
+        if(data->button_minus && data->trigger_r)
+        {
+            data->button_minus = false;
+            data->trigger_r = false;
+            data->button_home = true;
+        }
+        else data->button_home = false;
 
-    if(data->button_minus && data->trigger_l)
-    {
-        data->button_minus = false;
-        data->trigger_l = false;
-        data->button_capture = true;
+        if(data->button_minus && data->trigger_l)
+        {
+            data->button_minus = false;
+            data->trigger_l = false;
+            data->button_capture = true;
+        }
+        else data->button_capture = false;
     }
-    else data->button_capture = false;
     
     data->button_sync       = data->button_plus;
 
