@@ -71,7 +71,7 @@
 			{
 				"command" : 4,
 				"file" : 3,
-				"line" : 62,
+				"line" : 65,
 				"parent" : 7
 			},
 			{
@@ -83,7 +83,7 @@
 			{
 				"command" : 4,
 				"file" : 3,
-				"line" : 63,
+				"line" : 67,
 				"parent" : 7
 			},
 			{
@@ -95,7 +95,7 @@
 			{
 				"command" : 4,
 				"file" : 3,
-				"line" : 64,
+				"line" : 66,
 				"parent" : 7
 			},
 			{
@@ -643,9 +643,9 @@
 				37,
 				38,
 				39,
+				40,
 				41,
 				42,
-				43,
 				44,
 				45,
 				46,
@@ -659,17 +659,17 @@
 				54,
 				55,
 				56,
+				57,
 				58,
 				59,
 				61,
+				62,
 				64,
-				65,
-				69,
-				70,
+				67,
+				68,
 				72,
-				76,
-				77,
-				78,
+				73,
+				75,
 				79,
 				80,
 				81,
@@ -699,7 +699,10 @@
 				105,
 				106,
 				107,
-				108
+				108,
+				109,
+				110,
+				111
 			]
 		},
 		{
@@ -1162,17 +1165,17 @@
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				40,
-				57,
+				43,
 				60,
-				62,
 				63,
+				65,
 				66,
-				67,
-				68,
+				69,
+				70,
 				71,
-				73,
-				74
+				74,
+				76,
+				77
 			]
 		},
 		{
@@ -1662,7 +1665,7 @@
 			},
 			"sourceIndexes" : 
 			[
-				75
+				78
 			]
 		}
 	],
@@ -1678,11 +1681,11 @@
 		},
 		{
 			"backtrace" : 11,
-			"id" : "hoja_lib_nserial_pio_h::@16e020e79a31ade7a0ad"
+			"id" : "hoja_lib_joybus_pio_h::@16e020e79a31ade7a0ad"
 		},
 		{
 			"backtrace" : 13,
-			"id" : "hoja_lib_joybus_pio_h::@16e020e79a31ade7a0ad"
+			"id" : "hoja_lib_nserial_pio_h::@16e020e79a31ade7a0ad"
 		}
 	],
 	"id" : "SUPERGAMEPAD_RP2040::@6890427a1f51a3e7e1df",
@@ -2574,9 +2577,9 @@
 				37,
 				38,
 				39,
+				40,
 				41,
 				42,
-				43,
 				44,
 				45,
 				46,
@@ -2590,17 +2593,17 @@
 				54,
 				55,
 				56,
+				57,
 				58,
 				59,
 				61,
+				62,
 				64,
-				65,
-				69,
-				70,
+				67,
+				68,
 				72,
+				73,
 				75,
-				76,
-				77,
 				78,
 				79,
 				80,
@@ -2631,24 +2634,27 @@
 				105,
 				106,
 				107,
-				108
+				108,
+				109,
+				110,
+				111
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				40,
-				57,
+				43,
 				60,
-				62,
 				63,
+				65,
 				66,
-				67,
-				68,
+				69,
+				70,
 				71,
-				73,
-				74
+				74,
+				76,
+				77
 			]
 		}
 	],
@@ -2717,6 +2723,18 @@
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
+			"path" : "lib/HOJA-LIB-RP2040/src/utilities/i2c_safe.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "lib/HOJA-LIB-RP2040/src/utilities/spi_safe.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
 			"path" : "lib/HOJA-LIB-RP2040/src/usb/desc_bos.c",
 			"sourceGroupIndex" : 0
 		},
@@ -2754,6 +2772,12 @@
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
 			"path" : "lib/HOJA-LIB-RP2040/src/switch/switch_spi.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "lib/HOJA-LIB-RP2040/src/switch/switch_haptics.c",
 			"sourceGroupIndex" : 0
 		},
 		{
