@@ -1160,7 +1160,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "SUPERGAMEPAD_RP2040::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SUPERGAMEPAD_RP2040-Debug-952d53c9805cbb2b9b3e.json",
+					"jsonFile" : "target-SUPERGAMEPAD_RP2040-Debug-5c167cac02189ee16bb1.json",
 					"name" : "SUPERGAMEPAD_RP2040",
 					"projectIndex" : 0
 				},
@@ -1195,21 +1195,21 @@
 				{
 					"directoryIndex" : 81,
 					"id" : "hoja_lib_joybus_pio_h::@16e020e79a31ade7a0ad",
-					"jsonFile" : "target-hoja_lib_joybus_pio_h-Debug-4f0e1342e48b5cec6edd.json",
+					"jsonFile" : "target-hoja_lib_joybus_pio_h-Debug-a20d08575bb43ee14ab9.json",
 					"name" : "hoja_lib_joybus_pio_h",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 81,
 					"id" : "hoja_lib_nserial_pio_h::@16e020e79a31ade7a0ad",
-					"jsonFile" : "target-hoja_lib_nserial_pio_h-Debug-ddc5a1d6baada5d1e6e6.json",
+					"jsonFile" : "target-hoja_lib_nserial_pio_h-Debug-680c6ec666bfe5f1b6f8.json",
 					"name" : "hoja_lib_nserial_pio_h",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 81,
 					"id" : "hoja_lib_ws2812_pio_h::@16e020e79a31ade7a0ad",
-					"jsonFile" : "target-hoja_lib_ws2812_pio_h-Debug-8da89f259962bc0ca657.json",
+					"jsonFile" : "target-hoja_lib_ws2812_pio_h-Debug-920ec7bb623ca2031e85.json",
 					"name" : "hoja_lib_ws2812_pio_h",
 					"projectIndex" : 0
 				},

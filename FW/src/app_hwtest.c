@@ -76,7 +76,7 @@ bool _hwtest_bluetooth()
 
 bool _hwtest_battery()
 {
-    return util_battery_comms_check();
+    return battery_comms_check();
 }
 
 

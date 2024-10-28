@@ -71,7 +71,7 @@
 			{
 				"command" : 4,
 				"file" : 3,
-				"line" : 66,
+				"line" : 67,
 				"parent" : 7
 			},
 			{
@@ -83,7 +83,7 @@
 			{
 				"command" : 4,
 				"file" : 3,
-				"line" : 65,
+				"line" : 68,
 				"parent" : 7
 			},
 			{
@@ -95,7 +95,7 @@
 			{
 				"command" : 4,
 				"file" : 3,
-				"line" : 67,
+				"line" : 69,
 				"parent" : 7
 			},
 			{
@@ -646,8 +646,8 @@
 				40,
 				41,
 				42,
+				43,
 				44,
-				45,
 				46,
 				47,
 				48,
@@ -662,16 +662,16 @@
 				57,
 				58,
 				59,
+				60,
 				61,
-				62,
+				63,
 				64,
-				67,
-				68,
-				72,
-				73,
+				66,
+				69,
+				70,
+				74,
 				75,
-				79,
-				80,
+				77,
 				81,
 				82,
 				83,
@@ -702,7 +702,9 @@
 				108,
 				109,
 				110,
-				111
+				111,
+				112,
+				113
 			]
 		},
 		{
@@ -1165,17 +1167,17 @@
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				43,
-				60,
-				63,
+				45,
+				62,
 				65,
-				66,
-				69,
-				70,
+				67,
+				68,
 				71,
-				74,
+				72,
+				73,
 				76,
-				77
+				78,
+				79
 			]
 		},
 		{
@@ -1665,7 +1667,7 @@
 			},
 			"sourceIndexes" : 
 			[
-				78
+				80
 			]
 		}
 	],
@@ -1677,11 +1679,11 @@
 		},
 		{
 			"backtrace" : 9,
-			"id" : "hoja_lib_nserial_pio_h::@16e020e79a31ade7a0ad"
+			"id" : "hoja_lib_ws2812_pio_h::@16e020e79a31ade7a0ad"
 		},
 		{
 			"backtrace" : 11,
-			"id" : "hoja_lib_ws2812_pio_h::@16e020e79a31ade7a0ad"
+			"id" : "hoja_lib_nserial_pio_h::@16e020e79a31ade7a0ad"
 		},
 		{
 			"backtrace" : 13,
@@ -2580,8 +2582,8 @@
 				40,
 				41,
 				42,
+				43,
 				44,
-				45,
 				46,
 				47,
 				48,
@@ -2596,16 +2598,16 @@
 				57,
 				58,
 				59,
+				60,
 				61,
-				62,
+				63,
 				64,
-				67,
-				68,
-				72,
-				73,
+				66,
+				69,
+				70,
+				74,
 				75,
-				78,
-				79,
+				77,
 				80,
 				81,
 				82,
@@ -2637,24 +2639,26 @@
 				108,
 				109,
 				110,
-				111
+				111,
+				112,
+				113
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				43,
-				60,
-				63,
+				45,
+				62,
 				65,
-				66,
-				69,
-				70,
+				67,
+				68,
 				71,
-				74,
+				72,
+				73,
 				76,
-				77
+				78,
+				79
 			]
 		}
 	],
@@ -2730,6 +2734,18 @@
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
 			"path" : "lib/HOJA-LIB-RP2040/src/utilities/spi_safe.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "lib/HOJA-LIB-RP2040/src/utilities/ringbuffer.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "lib/HOJA-LIB-RP2040/src/utilities/haptics.c",
 			"sourceGroupIndex" : 0
 		},
 		{
